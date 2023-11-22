@@ -1,0 +1,151 @@
+.navigation {
+	
+	&__checkbox {
+		display:none;
+	}
+
+	&__button {
+		z-index:2000;
+		height:5rem;
+		width:5rem;
+		border-radius:50%;
+		position:fixed;
+		top:6rem;
+		right:12rem;
+		cursor:pointer;
+		text-align: center;
+
+		@include respond(phone) {
+			right: 2rem !important;
+		}
+	}
+
+	&__icon {
+
+		position:relative;
+		margin-top:3.5rem;
+		
+		&,
+		&::before,
+		&::after {
+			height:1px;
+			width:2.3rem;
+			background-color:$grey-light-1;
+			display:inline-block;
+		}
+
+		&::before,
+		&::after {
+			content:"";
+			position:absolute;
+			left:0;
+			transition:all .2s;
+		}
+
+		&::before {
+			top:-.8rem;
+		}
+
+		&::after {
+			top:.8rem;
+		}
+
+	}
+
+	&__button:hover &__icon::before {
+		top:-1rem;
+	}
+
+	&__button:hover &__icon::after {
+		top:1rem;
+	}
+
+	&__checkbox:checked + &__button &__icon {
+		background-color:transparent;
+	}
+
+	&__checkbox:checked + &__button &__icon::before {
+		transform:rotate(135deg);
+		top:0;
+	}
+
+	&__checkbox:checked + &__button &__icon::after {
+		transform:rotate(-135deg);
+		top:0;
+	}
+
+	&__background {
+		height:6rem;
+		width:6rem;
+		border-radius:50%;
+		position:fixed;
+		top: 5.5rem;
+		right: 11.5rem;
+		background-image: linear-gradient(to right bottom, transparent, transparent);
+		z-index:1000;
+		transition:transform .8s cubic-bezier(0.76, 0, 0.24, 1);
+
+		@include respond(phone) {
+			right: 1.5rem !important;
+		}
+	}
+
+	&__checkbox:checked ~ &__background {
+		transform:scale(80);
+		background-image: linear-gradient(to right bottom, rgba($black, .98), rgba($black, .98));    
+	}
+
+	&__nav {
+		height:100vh;
+		position:fixed;
+		top:0;
+		left:0;
+		z-index:1500;
+		width:0;
+		opacity:0;
+		transition:all .6s cubic-bezier(0.76, 0, 0.24, 1);
+
+	}
+
+	&__checkbox:checked ~ &__nav {
+		width:100%;
+		opacity:1;
+	}
+
+	&__list {
+		position:absolute;
+		top:50%;
+		@include center-object;
+		list-style:none;
+	}
+
+	&__item {
+		margin:2.5rem;
+	}
+
+	&__link {
+
+		font-size:3rem;
+		font-weight:300;
+		text-decoration:none;
+		text-transform:uppercase;
+		transition:all .4s;
+		display:inline-block;
+
+		&:link,
+		&:visited {
+			color:$white;
+		}
+
+		&:hover,
+		&:active {
+			color:$secondary-4;
+			transform:translate(1rem);		
+		}
+
+		span {
+			margin-right:1.5rem;
+			display:inline-block;
+		}	
+	}
+}

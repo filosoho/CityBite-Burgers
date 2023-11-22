@@ -1,0 +1,30 @@
+.u-align-center {
+	text-align: center;
+}
+
+.u-margin-sides {
+	text-align: justify;
+	margin-left: 6rem;
+	margin-right: 14rem;
+
+	@include respond(phone) {
+		margin-left: 2rem !important;
+	}
+}
+
+.u-margin-bottom-small {
+	margin-bottom:1.5rem;
+}
+
+.u-margin-bottom-medium {
+	margin-bottom:2.5rem;
+}
+
+.u-margin-bottom-big {
+	margin-bottom:8rem;
+
+	@include respond(phone) {
+		margin-top: 2rem;
+    	margin-bottom: 6rem;
+	}
+}

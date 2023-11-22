@@ -1,0 +1,37 @@
+.contact {
+	height:53rem;
+	background-image:radial-gradient(circle closest-corner at 67% 55%, transparent 0%, transparent 40%, rgba($primary-light,.4) 80%), url(img/contact-form-img-2.jpg);
+	background-size:100%;
+	background-position:left 50%;
+	border-radius: 3rem;
+	box-shadow: 4px 4px 4px rgb(0, 0, 0);
+
+	@include respond(phone) {
+		background-position: 80% 50%;
+	}
+
+	@include respond(tab-port) {
+		background-image:radial-gradient(circle closest-corner at 75% 52%, rgba($primary-light,.4) 0%, rgba($primary-light,.4) 50%, rgba($primary-light,.4) 50%), url(img/contact-form-img-2.jpg);
+		background-size:cover;
+		}
+
+	&__form {
+		width:50%;
+		padding: 4rem 6rem;
+
+		@include respond(phone) {
+			width: 100% !important;
+		}
+		@include respond(tab-port) {
+			width:100%;
+			text-align:center;
+			padding:3rem;
+		}		
+	}
+}
+
+.contact-row {
+	@include respond(phone) {
+		max-width: 90% !important;
+	}
+}
