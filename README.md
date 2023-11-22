@@ -22,7 +22,7 @@ The CityBite Burgers website is designed to provide a seamless and visually appe
 
 Open the Website:
 
-  - Open the index.html file in your preferred web browser.   
+  - Got to: https://citybite-burgers.netlify.app  
   - Explore the site and enjoy the CityBite Burgers experience!
 
 
