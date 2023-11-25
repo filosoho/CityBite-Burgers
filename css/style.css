@@ -558,6 +558,11 @@ body {
   border-radius: 50px; }
 
 .composition {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
   position: relative;
   margin-left: 5rem; }
   @media only screen and (max-width: 480px) {
