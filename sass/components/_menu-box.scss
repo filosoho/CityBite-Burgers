@@ -1,234 +1,217 @@
 .menu-box {
-	border-radius:3px;
-	box-shadow: 2px 1px 2px 0px rgba($light-grey,100);
-	width:28rem;
-	height:47rem;
-	color:$white;
-	position:relative;
+  border-radius: 3px;
+  box-shadow: 2px 1px 2px 0px rgba($light-grey, 100);
+  width: 20%;
+  height: 47rem;
+  color: $white;
+  position: relative;
 
-	@include respond(phone) {
-		width:100% !important;
-		height: 58rem;
-		margin:1.5rem auto;
-	}
+  @include respond(big-desktop) {
+    width: 35rem;
+    margin-bottom: 50px;
+  }
 
-	@include respond(tab-land) {
-		width: 23rem;
-		margin-bottom: 50px;
-	}
+  @include respond(tab-land) {
+    width: 35rem;
+    margin-bottom: 50px;
+  }
 
-	@include respond(tab-port) {
-		width:50rem;
-		height: 58rem;
-		margin:1.5rem auto;
-	}
+  @include respond(tab-port) {
+    width: 50rem;
+    height: 58rem;
+    margin: 1.5rem auto;
+  }
 
-	&--1 {
-		background-image:linear-gradient(to right bottom,rgba($primary-light, 0.5),rgba($primary-dark, 0.5)),url(../img/menu-img-1.jpg);
-		background-size:cover;
-		background-position:78% 50%;
-	}
+  @include respond(phone) {
+    width: 100%;
+    height: 58rem;
+    margin: 1.5rem auto;
+  }
 
-	&--2 {
-		background-image:linear-gradient(to right bottom,rgba($primary-light, 0.5),rgba($primary-dark, 0.5)),url(../img/menu-img-2.jpg);
-		background-size:cover;
-		background-position:78% 50%;
-	}
+  &--1 {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($primary-light, 0.5),
+        rgba($primary-dark, 0.5)
+      ),
+      url(../img/menu-img-1.jpg);
+    background-size: cover;
+    background-position: 78% 50%;
+  }
 
-	&--3 {
-		background-image:linear-gradient(to right bottom,rgba($primary-light, 0.5),rgba($primary-dark, 0.5)),url(../img/menu-img-3.jpg);
-		background-size:cover;
-		background-position:78% 50%;
-	}
+  &--2 {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($primary-light, 0.5),
+        rgba($primary-dark, 0.5)
+      ),
+      url(../img/menu-img-2.jpg);
+    background-size: cover;
+    background-position: 78% 50%;
+  }
 
-	&--4 {
-		background-image:linear-gradient(to right bottom,rgba($primary-light, 0.5),rgba($primary-dark, 0.5)),url(../img/menu-img-4.jpg);
-		background-size:cover;
-		background-position:78% 50%;
-	}
+  &--3 {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($primary-light, 0.5),
+        rgba($primary-dark, 0.5)
+      ),
+      url(../img/menu-img-3.jpg);
+    background-size: cover;
+    background-position: 78% 50%;
+  }
 
-	&__title {
-		font-size:4rem;
-		text-transform:uppercase;
-		position:absolute;
-		top:50%;
-		@include center-object;
-		opacity:.8;
-		transition:opacity .2s;
+  &--4 {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($primary-light, 0.5),
+        rgba($primary-dark, 0.5)
+      ),
+      url(../img/menu-img-4.jpg);
+    background-size: cover;
+    background-position: 78% 50%;
+  }
 
-		@include respond(tab-port) {
-			opacity:0;
-		}
+  &__title {
+    font-size: 4rem;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    @include center-object;
+    opacity: 0.8;
+    transition: opacity 0.2s;
 
-		@include respond(tab-land) {
-			font-size: 3rem;
-		}
-	}
+    @include respond(tab-land) {
+      font-size: 3rem;
+    }
+    @include respond(tab-port) {
+      opacity: 0;
+    }
+  }
 
-	&__overlay {
-		position:absolute;
-		top:0;
-		left:0;
-		width:28rem;
-		height:47rem;
-		background-image:linear-gradient(to right bottom,$primary-light,$primary-dark);
-		opacity:0.2;
-		transition:opacity .2s;
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 47rem;
+    background-image: linear-gradient(
+      to right bottom,
+      $primary-light,
+      $primary-dark
+    );
+    opacity: 0.2;
+    transition: opacity 0.2s;
 
-		@include respond(phone) {
-			width:100% !important;
-			height: 58rem;
-			opacity: 0.3 !important;
-		}
+    @include respond(big-desktop) {
+      width: 35rem;
+      height: 58rem;
+      //   opacity: 0.7;
+    }
+    @include respond(tab-land) {
+      width: 35rem;
+      height: 58rem;
+      //   opacity: 0.7;
+    }
+    @include respond(tab-port) {
+      width: 50rem;
+      height: 58rem;
+      opacity: 0.7;
+    }
+    @include respond(phone) {
+      width: 100%;
+      height: 58rem;
+      opacity: 0.7;
+    }
+  }
 
-		@include respond(tab-port) {
-			width:50rem;
-			height: 58rem;
-			opacity:.3;
-		}
-	}
+  &:hover &__overlay {
+    opacity: 0.7;
+  }
 
-	&:hover &__overlay {
-	opacity:.7;
-	}
+  &:hover &__title {
+    opacity: 0;
+  }
 
-	&:hover &__title {
-	opacity:0;
-	}
+  &__content {
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, 10%);
+    text-align: left;
+    width: 85%;
+    opacity: 0;
+    transition: all 0.2s;
+    overflow: hidden;
 
-	&__content {
-		position:absolute;
-		top:10%;
-		@include center-object;
-		text-align: left;
-		width:85%;
-		opacity:0;
-		transition:all .2s;
+    @include respond(tab-port) {
+      opacity: 1;
+      font-size: 1.4rem;
+    }
+    @include respond(phone) {
+      font-size: 1.15rem;
+    }
+  }
 
-		@include respond(phone) {
-			font-size: 1.15rem;
-		}
+  &:hover &__content {
+    opacity: 1;
+  }
 
-		@include respond(tab-port) {
-			opacity:1;
-			top:50%;
-			font-size: 1.4rem;
-		}
-	}
-
-	&:hover &__content {
-		opacity:1;
-		top:50%;
-	}
-
-	&__text {
-		font-size:1.5rem;
-	}
+  &__text {
+    font-size: 1.5rem;
+  }
 }
 
 .menu-cards {
-	display: flex;
-    max-width: 114rem;
-    margin: 0 auto;
-    flex-wrap: wrap;
-	align-items: flex-start; 
+  max-width: 2000px;
+  margin: auto;
 
-	@include respond(phone) {
-		align-items: center;
-		flex-direction: column;
-		max-width: 90%;
-	}
-
-	@include respond(tab-port) {
-		align-items: center;
-		flex-direction: column;
-		max-width: 100rem;
-	}
-
-	@include respond(tab-land) {
-		max-width: 100rem;
-		margin-right: 3rem !important;
-		margin-left: 1.3rem;
-	}
+  @include respond(big-desktop) {
+    max-width: 1100px;
+  }
+  @include respond(tab-land) {
+    max-width: 700px;
+  }
+  @include respond(tab-port) {
+    max-width: 400px;
+  }
+  @include respond(phone) {
+    max-width: 90%;
+  }
 }
 
-.column {
-	float: left;
-	width: 25% !important;
-	padding: 0 10px;
-    margin-right: 1rem !important;
-    margin-left: -1rem !important;
-
-	@include respond(phone) {
-		margin-left: 6rem !important;
-		margin-right: 0rem !important;
-	}
-
-	@include respond(tab-port) {
-		width: calc((100% - 3 * 6rem) / 4)!important;
-		display: block;
-		margin-bottom: 20px;
-	}
-
-	@include respond(tab-land) {
-		width: calc((100% - 3 * 6rem) / 4)!important;
-		display: block;
-		margin-bottom: 20px;
-		margin-left: 1.2rem !important;
-	}
-}
-
-/* Clear floats after the columns */
-.row:after {
-	@include respond(tab-port) {
-		content: "";
-		display: table;
-		clear: both;
-	}
-
-	@include respond(tab-land) {
-		content: "";
-		display: table;
-		clear: both;
-		}
-	}
-
-.row [class^="col-"]:not(:last-child) {
-	@include respond(tab-port) {
-		margin-right: 4rem !important;
-		margin-left: 1.2rem;
-	}
-
-	@include respond(tab-land) {
-		margin-right: 4rem !important;
-		margin-left: 1.2rem;
-	}
-}
-
-.row [class^="col-"] {
-	@include respond(phone) {
-    	width: 90% !important;
-	}
-
-	@include respond(tab-port) {
-    	width: 90% !important;
-	}
+.menu-container {
+  display: flex;
+  max-width: 100%;
+  justify-content: center;
+  max-width: 100%;
 }
 
 .our-menu {
-	@include respond(tab-port) {
-		max-width:100% !important;
-	}
+  max-width: 800px;
+  margin-bottom: 8rem;
+
+  @include respond(tab-land) {
+    max-width: 700px;
+    margin-bottom: 1.5rem;
+  }
+  @include respond(tab-port) {
+    max-width: 400px;
+    margin-bottom: 1rem;
+  }
+  @include respond(phone) {
+    max-width: 95%;
+  }
 }
 
 .bold-menu {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 li {
-	margin-top: 5px;
+  margin-top: 5px;
 
-	@include respond(tab-port) {
-		margin-top: 1px;
-	}
+  @include respond(tab-port) {
+    margin-top: 1px;
+  }
 }

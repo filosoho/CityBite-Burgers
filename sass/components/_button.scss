@@ -1,95 +1,108 @@
 .btn {
-	&:link,
-	&:visited {
-		text-decoration:none;
-		text-transform:uppercase;
-		padding:1rem 3rem;
-		font-size:1.2rem;
-		border-radius: 5rem;
-		position:relative;
-		border:2px solid $grey-light-1;
-		display:inline-block;
-		transition:all .2s;
-	}
+  &:link,
+  &:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    font-size: 1.6rem;
+    border-radius: 5rem;
+    position: relative;
+    border: 2px solid $grey-light-1;
+    display: inline-block;
+    transition: all 0.2s;
+    margin: 0.5rem;
 
-	&:hover {
-		outline:none;
-		transform:translateY(-3px);
-		box-shadow:0 1rem 2rem  rgba($black, .5);
-	}
+    @include respond(big-desktop) {
+      font-size: 1.4rem;
+    }
+    @include respond(tab-land) {
+      font-size: 1.4rem;
+    }
+    @include respond(tab-port) {
+      font-size: 1.2rem;
+      //   margin: 1.2rem;
+    }
+    @include respond(phone) {
+      font-size: 1rem;
+    }
+  }
 
-	&:active {
-		transform:translateY(-1px);
-		box-shadow:0 .5rem 1rem rgba($black, .5);
-	}
+  &:hover {
+    outline: none;
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($black, 0.5);
+  }
 
-	&--black {
-		background-color:$black;
-		color:$grey-light-1;
-		font-weight: 800;
-		margin:2.5rem 1rem 0 0;
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($black, 0.5);
+  }
 
-		@include respond(tab-port) {
-			margin:1rem;
-		}
+  &--black {
+    background-color: $black;
+    color: $grey-light-1;
+    font-weight: 800;
+    margin: 2.5rem 1rem 0 0;
 
-		@include respond(tab-land) {
-			margin: 0;
-		}
-	}
+    @include respond(tab-land) {
+      margin: 0;
+    }
+    @include respond(tab-port) {
+      margin: 1rem;
+    }
+  }
 
-	&--white {
-		background-color:$grey-light-1;
-		color:$black;
-		font-weight: 800;
-		margin:2.5rem 1rem 0 0;
-		border:2px solid $black !important;
+  &--white {
+    background-color: $grey-light-1;
+    color: $black;
+    font-weight: 800;
+    margin: 2.5rem 1rem 0 0;
+    border: 2px solid $black !important;
 
-		@include respond(tab-port) {
-			margin:1rem;
-		}
-	}
+    @include respond(tab-port) {
+      margin: 1rem;
+    }
+  }
 }
 
 .btn-rectangular {
-	&:link,
-	&:visited
-	 {
-		color:$black;
-		text-decoration:none;
-		text-transform:uppercase;
-		border-bottom:1px solid $black;
-		padding:1rem 3rem;
-		font-size:1.2rem;
-		transition:all .2s;
-	}
-	
-	&--white:hover,
-	&:hover {
-		background-color:$black;
-		color:$white;
-		border:2px solid $grey-light-1;
-		border-radius: 50px;
-		box-shadow:0 1rem 2rem rgba($black, .5);
-		transform:translateY(-3px);
-	}
+  &:link,
+  &:visited {
+    color: $black;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid $black;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    transition: all 0.2s;
+  }
 
-	&--white:active,
-	&:active {
-		transform:translateY(-1px);
-		border:2px solid $grey-light-1;
+  &--white:hover,
+  &:hover {
+    background-color: $black;
+    color: $white;
+    border: 2px solid $grey-light-1;
+    border-radius: 50px;
+    box-shadow: 0 1rem 2rem rgba($black, 0.5);
+    transform: translateY(-3px);
+  }
 
-		border-radius: 50px;
-		box-shadow:0 .5rem 1rem rgba($black, .5);
-	}
+  &--white:active,
+  &:active {
+    transform: translateY(-1px);
+    border: 2px solid $grey-light-1;
 
-	&--white:link,
-	&--white:visited {
-		color:$white;
-		border-bottom:1px solid $white;
-	}
+    border-radius: 50px;
+    box-shadow: 0 0.5rem 1rem rgba($black, 0.5);
+  }
 
-	&--white:hover {
-		border-radius: 50px;
-	}
+  &--white:link,
+  &--white:visited {
+    color: $white;
+    border-bottom: 1px solid $white;
+  }
+
+  &--white:hover {
+    border-radius: 50px;
+  }
 }

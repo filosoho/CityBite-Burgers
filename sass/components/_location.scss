@@ -1,228 +1,276 @@
 .location {
-	height:40rem;
-	color:$white;
-	perspective:150rem;	
-	position:relative;
+  height: 40rem;
+  color: $white;
+  perspective: 150rem;
+  position: relative;
 
-	@include respond(tab-port) {
-		height:auto;
-		background-color:$white;
-		margin-bottom:1.5rem;
-	}	
+  @include respond(tab-port) {
+    height: auto;
+    background-color: $white;
+    margin-bottom: 1.5rem;
+  }
 
-	&__side {
-			position:absolute;
-			left:0;
-			top:0;
-			backface-visibility:hidden;
-			height:100%;
-			width:100%;
-			transition:all .9s;			
-			overflow:hidden;
+  &__side {
+    position: absolute;
+    left: 0;
+    top: 0;
+    backface-visibility: hidden;
+    height: 100%;
+    width: 100%;
+    transition: all 0.9s;
+    overflow: hidden;
 
-			@include respond(tab-port) {
-				height:auto;
-				position:relative;
-				border-radius:0;
-			}
-			
-		&--front {
-			background-color:$white;
-			border-radius: 30px 0 30px 0;
-			
-			@include respond(tab-port) {
-				border-radius:0;
-			}
-		}
+    @include respond(tab-port) {
+      height: auto;
+      position: relative;
+      border-radius: 0;
+    }
 
-		&--back {
-			background-color:#1f1f1f;
-			transform:rotateY(180deg);
-			border: 2px solid rgb(219, 219, 219);
-			border-radius: 0 30px 0 30px;
+    &--front {
+      background-color: $white;
+      border-radius: 30px 0 30px 0;
 
-			@include respond(tab-port) {
-				transform:rotateY(0);
-				border-radius: 0;
-			}
+      @include respond(tab-port) {
+        border-radius: 0;
+      }
+    }
 
-			&-1 {				
-				background-image:linear-gradient(to right bottom,rgba($primary-light, 0.5),rgba($primary-dark, 0.5)),url(../img/back-img-1.jpg);
-			}
+    &--back {
+      background-color: #1f1f1f;
+      transform: rotateY(180deg);
+      border: 2px solid rgb(219, 219, 219);
+      border-radius: 0 30px 0 30px;
 
-			&-2 {				
-				background-image:linear-gradient(to right bottom,rgba($primary-light, 0.5),rgba($primary-dark, 0.5)),url(../img/back-img-2.jpg);
-			}
+      @include respond(tab-port) {
+        transform: rotateY(0);
+        border-radius: 0;
+      }
 
-			&-3 {				
-				background-image:linear-gradient(to right bottom,rgba($primary-light, 0.5),rgba($primary-dark, 0.5)),url(../img/back-img-3.jpg);
-			}
+      &-1 {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($primary-light, 0.5),
+            rgba($primary-dark, 0.5)
+          ),
+          url(../img/back-img-1.jpg);
+      }
 
-			&-4 {				
-				background-image:linear-gradient(to right bottom,rgba($primary-light, 0.5),rgba($primary-dark, 0.5)),url(../img/back-img-4.jpg);
-			
-				@include respond(tab-land) {
-					background-repeat: no-repeat;
-    				background-size: 100%;
-				}
-			}
-		}		
-	}
+      &-2 {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($primary-light, 0.5),
+            rgba($primary-dark, 0.5)
+          ),
+          url(../img/back-img-2.jpg);
+      }
 
-	&:hover &__side--front{
-			transform:rotateY(-180deg);
+      &-3 {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($primary-light, 0.5),
+            rgba($primary-dark, 0.5)
+          ),
+          url(../img/back-img-3.jpg);
+      }
 
-			@include respond(tab-port) {
-				transform:rotateY(0);
-			}			
-	}
+      &-4 {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($primary-light, 0.5),
+            rgba($primary-dark, 0.5)
+          ),
+          url(../img/back-img-4.jpg);
 
-	&:hover &__side--back {
-			transform:rotateY(0);
-	}
+        @include respond(tab-land) {
+          background-repeat: no-repeat;
+          background-size: 100%;
+        }
+      }
+    }
+  }
 
-	&__image {		
-		height:40rem;
-		background-size:cover;
-		scale: 1.2;
-		background-position: 50% 50%;
-		
-		@include respond(tab-land) {
-			scale: 1;
-		}
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
 
-		&--1 {				
-			background-image:linear-gradient(to right bottom,rgba($primary-light, 0.4),rgba($primary-dark, 0.4)),url(../img/location-img-1.jpg);
-		}
+    @include respond(tab-port) {
+      transform: rotateY(0);
+    }
+  }
 
-		&--2 {
-			background-image:linear-gradient(to right bottom,rgba($primary-light, 0.4),rgba($primary-dark, 0.4)),url(../img/location-img-2.jpg);
-		}
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
 
-		&--3 {
-			background-image:linear-gradient(to right bottom,rgba($primary-light, 0.4),rgba($primary-dark, 0.4)),url(../img/location-img-3.jpg);
-		}
+  &__image {
+    height: 40rem;
+    background-size: cover;
+    scale: 1.2;
+    background-position: 50% 50%;
 
-		&--4 {
-			background-image:linear-gradient(to right bottom,rgba($primary-light, 0.4),rgba($primary-dark, 0.4)),url(../img/location-img-4.jpg);
-		}
-	}
+    @include respond(tab-land) {
+      scale: 1;
+    }
 
-	&__content {
-		@include respond(tab-land) {
-			position: relative;
-			top: 30%;
-		}
-	}
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($primary-light, 0.4),
+          rgba($primary-dark, 0.4)
+        ),
+        url(../img/location-img-1.jpg);
+    }
 
-	&__heading {
-		color:$white;
-		font-weight:400;
-		font-size:2.6rem;
-		text-transform:uppercase;
-		position:absolute;
-		top:4rem;
-		right:2rem;
-		width:20rem;
-		text-align: center;
-		padding:1rem 1.5rem;
-		border-radius: 15px;
-		background-image:linear-gradient(to right bottom, rgba($secondary-1,.28), rgba($secondary-1-dark,.45));
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($primary-light, 0.4),
+          rgba($primary-dark, 0.4)
+        ),
+        url(../img/location-img-2.jpg);
+    }
 
-		@include respond(tab-land) {
-			font-size: 2rem;
-    		width: 14rem;
-		}
-	}
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($primary-light, 0.4),
+          rgba($primary-dark, 0.4)
+        ),
+        url(../img/location-img-3.jpg);
+    }
 
-	&__button {
-		position:absolute;
-		top:50%;
-		@include center-object;
-		width:90%;
-		text-align:center;
-		height: auto;
-		border-radius: 20px;
-		padding: 20px;
-		background-color: #0000006e;
+    &--4 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($primary-light, 0.4),
+          rgba($primary-dark, 0.4)
+        ),
+        url(../img/location-img-4.jpg);
+    }
+  }
 
-		@include respond(phone) {
-			padding: 15px !important;
-		}
+  &__content {
+    @include respond(tab-land) {
+      position: relative;
+      top: 30%;
+    }
+  }
 
-		@include respond(tab-port) {
-			position:relative;
-			top:0;
-			left:0;
-			transform:translate(0);
-			width:100%;
-			height: 350px;
-			padding:4rem;
-			border-radius: 0;
-		}
-	}
+  &__heading {
+    color: $white;
+    font-weight: 400;
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+    width: 20rem;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($secondary-1, 0.28),
+      rgba($secondary-1-dark, 0.45)
+    );
+
+    @include respond(big-desktop) {
+      font-size: 2rem;
+      right: 1rem;
+      width: 14rem;
+    }
+    @include respond(tab-land) {
+      font-size: 2rem;
+      width: 14rem;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    @include center-object;
+    width: 90%;
+    text-align: center;
+    height: auto;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #0000006e;
+
+    @include respond(phone) {
+      padding: 15px !important;
+    }
+
+    @include respond(tab-port) {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0);
+      width: 100%;
+      height: 350px;
+      padding: 4rem;
+      border-radius: 0;
+    }
+  }
 }
 
 .location-box {
+  border-radius: 3px;
+  box-shadow: 2px 1px 2px 0px rgba($light-grey, 100);
+  width: 28rem;
+  height: 40rem;
+  color: $white;
+  position: relative;
+  list-style: none;
 
-	border-radius:3px;
-	box-shadow: 2px 1px 2px 0px rgba($light-grey,100);
-	width:28rem;
-	height:40rem;
-	color:$white;
-	position:relative;
-	list-style: none;
+  @include respond(tab-port) {
+    width: 50rem;
+    margin: 1.5rem auto;
+  }
 
-	@include respond(tab-port) {
-		width:50rem;
-		margin:1.5rem auto;
-	}
+  &__text {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
 
-	&__text {
-		font-size: 1.2rem;
-		margin-bottom: 30px;
+    @include respond(phone) {
+      font-size: 1.6rem !important;
+      margin-bottom: 20px !important;
+    }
 
-		@include respond(phone) {
-			font-size: 1.6rem !important;
-			margin-bottom: 20px !important;
-		}
+    @include respond(tab-port) {
+      font-size: 2rem;
+      margin-bottom: 40px !important;
+    }
 
-		@include respond(tab-port) {
-			font-size: 2rem;
-			margin-bottom: 40px !important;
-		}
-
-		@include respond(tab-land) {
-			margin-bottom: 20px;
-		}
-	}
+    @include respond(tab-land) {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .where-row {
-	@include respond(phone) {
-		display: flex;
-		flex-direction: column;
-    	align-items: center;
-		max-width: 90vw;
-		text-align: center;
-	}
-
-	@include respond(tab-port) {
-		display: flex;
-		flex-direction: column;
-    	align-items: center;
-		max-width: 90vw;
-	}
+  @include respond(tab-port) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90vw;
+    text-align: center;
+  }
+  @include respond(phone) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90vw;
+    text-align: center;
+  }
 }
 
-.row [class^="col-"]:not(:last-child) {
-	@include respond(phone) {
-		margin-left: 0;
-		margin-right: 0 !important;
-	}
+.row [class^="col-"] {
+  @include respond(phone) {
+    margin-left: 0;
+    margin-right: 0 !important;
+  }
 
-	@include respond(tab-port) {
-		margin-left: 0;
-		margin-right: 0 !important;
-	}
+  @include respond(tab-port) {
+    margin-left: 0;
+    margin-right: 0 !important;
+  }
 }

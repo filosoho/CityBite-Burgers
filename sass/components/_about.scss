@@ -1,0 +1,95 @@
+.about-container {
+  display: flex;
+  max-width: 90%;
+  margin-inline: auto;
+
+  @include respond(tab-land) {
+    flex-direction: column;
+  }
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+  @include respond(phone) {
+    flex-direction: column;
+  }
+}
+
+.about-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 25%;
+  margin-inline: auto;
+
+  @include respond(tab-land) {
+    max-width: 90%;
+    margin-bottom: 6rem;
+  }
+  @include respond(tab-port) {
+    max-width: 90%;
+    margin-bottom: 6rem;
+  }
+  @include respond(phone) {
+    max-width: 90%;
+    margin-bottom: 6rem;
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 6rem;
+    box-shadow: 3px 3px 3px 0px rgb(0, 0, 0);
+    border-radius: 5px;
+    z-index: 10;
+    outline-offset: 2rem;
+    transition: all 0.2s;
+
+    @include respond(tab-port) {
+    }
+    @include respond(phone) {
+    }
+
+    &:hover {
+      transform: scale(1.05) translateY(-0.5rem);
+      box-shadow: 4px 4px 12px -3px rgb(0, 0, 0);
+      z-index: 20;
+      outline: 0.1rem solid #0e0000;
+    }
+
+    &:hover &:__img:not(:hover) {
+      transform: scale(0.9);
+    }
+  }
+}
+
+.about-btn {
+  margin-top: 6rem;
+  margin-left: 15rem;
+
+  @include respond(big-desktop) {
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+    margin-left: 8rem;
+  }
+  @include respond(tab-land) {
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+    margin-left: 12rem;
+  }
+  @include respond(tab-port) {
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+    margin-left: 8rem;
+  }
+  @include respond(phone) {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 5rem;
+  }
+}
+
+.col-1-of-2.about-box {
+  @include respond(tab-port) {
+    width: 90% !important;
+  }
+}
