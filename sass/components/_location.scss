@@ -1,7 +1,7 @@
 .location {
-  height: 40rem;
+  height: 450px;
   color: $white;
-  perspective: 150rem;
+  perspective: 120rem;
   position: relative;
 
   @include respond(tab-port) {
@@ -21,7 +21,7 @@
     overflow: hidden;
 
     @include respond(tab-port) {
-      height: auto;
+      height: 350px;
       position: relative;
       border-radius: 0;
     }
@@ -102,7 +102,7 @@
   }
 
   &__image {
-    height: 40rem;
+    height: 450px;
     background-size: cover;
     scale: 1.2;
     background-position: 50% 50%;
@@ -114,8 +114,8 @@
     &--1 {
       background-image: linear-gradient(
           to right bottom,
-          rgba($primary-light, 0.4),
-          rgba($primary-dark, 0.4)
+          rgba($primary-dark, 0.4),
+          rgba($primary-dark-1, 0.4)
         ),
         url(../img/location-img-1.jpg);
     }
@@ -123,8 +123,8 @@
     &--2 {
       background-image: linear-gradient(
           to right bottom,
-          rgba($primary-light, 0.4),
-          rgba($primary-dark, 0.4)
+          rgba($primary-dark, 0.4),
+          rgba($primary-dark-1, 0.4)
         ),
         url(../img/location-img-2.jpg);
     }
@@ -132,8 +132,8 @@
     &--3 {
       background-image: linear-gradient(
           to right bottom,
-          rgba($primary-light, 0.4),
-          rgba($primary-dark, 0.4)
+          rgba($primary-dark, 0.4),
+          rgba($primary-dark-1, 0.4)
         ),
         url(../img/location-img-3.jpg);
     }
@@ -141,31 +141,53 @@
     &--4 {
       background-image: linear-gradient(
           to right bottom,
-          rgba($primary-light, 0.4),
-          rgba($primary-dark, 0.4)
+          rgba($primary-dark, 0.4),
+          rgba($primary-dark-1, 0.4)
         ),
         url(../img/location-img-4.jpg);
     }
   }
 
   &__content {
-    @include respond(tab-land) {
-      position: relative;
-      top: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+
+    @include respond(tab-port) {
+      align-items: center;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      text-align: center;
+
+      @include respond(tab-port) {
+        font-size: 1.5rem;
+      }
+      @include respond(phone) {
+        font-size: 1.2rem;
+      }
+    }
+
+    .btn:link,
+    .btn:visited {
     }
   }
 
   &__heading {
-    color: $white;
+    color: #fff;
     font-weight: 400;
-    font-size: 2.6rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     position: absolute;
-    top: 4rem;
-    right: 2rem;
-    width: 20rem;
+    top: 2rem;
+    right: 1rem;
+    width: 12rem;
     text-align: center;
-    padding: 1rem 1.5rem;
+    padding: 0.5rem 1rem;
     border-radius: 15px;
     background-image: linear-gradient(
       to right bottom,
@@ -174,17 +196,20 @@
     );
 
     @include respond(big-desktop) {
-      font-size: 2rem;
-      right: 1rem;
-      width: 14rem;
+      font-size: 1.65rem;
+      padding: 1.5rem;
+      width: 12.5rem;
     }
     @include respond(tab-land) {
-      font-size: 2rem;
-      width: 14rem;
+      font-size: 1.65rem;
+      padding: 1.5rem;
+      width: 12.5rem;
     }
   }
 
   &__button {
+    display: flex;
+    align-items: center;
     position: absolute;
     top: 50%;
     @include center-object;
@@ -193,11 +218,7 @@
     height: auto;
     border-radius: 20px;
     padding: 20px;
-    background-color: #0000006e;
-
-    @include respond(phone) {
-      padding: 15px !important;
-    }
+    background-color: #000000b3;
 
     @include respond(tab-port) {
       position: relative;
@@ -208,6 +229,9 @@
       height: 350px;
       padding: 4rem;
       border-radius: 0;
+    }
+    @include respond(phone) {
+      padding: 15px;
     }
   }
 }
@@ -227,50 +251,45 @@
   }
 
   &__text {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    font-size: 16px;
+    margin-bottom: 20px;
 
-    @include respond(phone) {
-      font-size: 1.6rem !important;
-      margin-bottom: 20px !important;
+    @include respond(big-desktop) {
+      font-size: 14px;
+      padding-inline: 1rem;
     }
 
     @include respond(tab-port) {
-      font-size: 2rem;
-      margin-bottom: 40px !important;
+      max-width: 80%;
+      text-align: center;
     }
-
-    @include respond(tab-land) {
-      margin-bottom: 20px;
+    @include respond(phone) {
+      padding-inline: 0;
     }
   }
 }
 
-.where-row {
-  @include respond(tab-port) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 90vw;
-    text-align: center;
+.location-row {
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  @include respond(big-desktop) {
+    flex-wrap: wrap;
+    max-width: 91vw;
   }
-  @include respond(phone) {
-    display: flex;
+  @include respond(tab-port) {
     flex-direction: column;
-    align-items: center;
-    max-width: 90vw;
-    text-align: center;
   }
 }
 
 .row [class^="col-"] {
-  @include respond(phone) {
-    margin-left: 0;
-    margin-right: 0 !important;
+  @include respond(big-desktop) {
+    flex: 0 1 calc(48% - 2rem);
   }
 
   @include respond(tab-port) {
     margin-left: 0;
-    margin-right: 0 !important;
+    margin-right: 0;
   }
 }

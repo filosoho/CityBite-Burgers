@@ -1,7 +1,7 @@
 .form {
   &__input {
-    font-size: 1.5rem;
-    padding: 1.5rem 2rem;
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
     background-color: #f5f5f5;
     border: none;
     width: 400px;
@@ -35,21 +35,16 @@
 
   &__input:placeholder-shown + &__label {
     opacity: 0;
-    transform: translateY(-4rem);
   }
 
   &__input::placeholder {
     color: #a3a3a3;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   &__label {
-    font-size: 1rem;
-    font-weight: 700;
-    margin: 0.7rem 2rem 2rem;
-    color: $white;
-    display: block;
-    transition: all 0.3s;
+    opacity: 0;
+    display: none;
   }
 
   &__group {
@@ -59,7 +54,7 @@
   &__radio-group {
     display: flex;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 
     @include respond(phone) {
       width: 40%;
@@ -71,18 +66,17 @@
   }
 
   &__radio-label {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: $white;
     cursor: pointer;
     display: flex;
     align-items: center;
-    padding-left: 1rem;
+    padding-left: 0.5rem;
     position: relative;
 
     @include respond(phone) {
-      font-size: 0.9rem;
-      padding-left: 1rem;
-      padding-right: 0.9rem;
+      font-size: 0.8rem;
+      padding-left: 0;
     }
   }
 
@@ -91,8 +85,8 @@
   }
 
   &__radio-button {
-    height: 3rem;
-    width: 3rem;
+    height: 2rem;
+    width: 2rem;
     border-radius: 50%;
     background-image: url(img/hamburger.jpg);
     background-position: 55% 50%;
@@ -125,21 +119,21 @@
     font-family: inherit;
     color: $grey-dark-3;
     width: 500px;
-    height: 10rem;
-    padding: 1.5rem 1rem;
-    margin: 0.5rem 0 1.5rem;
+    height: 8rem;
+    padding: 1rem;
+    margin: 0.5rem 0 1rem;
 
     @include respond(tab-port) {
       width: 300px;
     }
     @include respond(phone) {
-      width: 200px;
+      width: 100%;
     }
   }
 
   &__textarea::placeholder {
     color: #a3a3a3;
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding-left: 10px;
   }
 }

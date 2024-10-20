@@ -9,14 +9,10 @@
     width: 5rem;
     border-radius: 50%;
     position: fixed;
-    top: 6rem;
-    right: 12rem;
+    top: 0;
+    right: 2rem;
     cursor: pointer;
     text-align: center;
-
-    @include respond(phone) {
-      right: 2rem !important;
-    }
   }
 
   &__icon {
@@ -138,11 +134,11 @@
   }
 
   &__item {
-    margin: 2.5rem;
+    margin: 1rem auto;
   }
 
   &__link {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 300;
     text-decoration: none;
     text-transform: uppercase;

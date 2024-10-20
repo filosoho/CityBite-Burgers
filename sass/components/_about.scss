@@ -6,48 +6,54 @@
   @include respond(tab-land) {
     flex-direction: column;
   }
-  @include respond(tab-port) {
-    flex-direction: column;
-  }
-  @include respond(phone) {
-    flex-direction: column;
-  }
 }
 
 .about-box {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 25%;
+  max-width: 30%;
   margin-inline: auto;
 
   @include respond(tab-land) {
     max-width: 90%;
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
   }
-  @include respond(tab-port) {
-    max-width: 90%;
-    margin-bottom: 6rem;
+
+  h3 {
+    align-self: center;
+    font-size: 20px;
+
+    @include respond(tab-land) {
+      font-size: 24px;
+      margin-bottom: 2rem;
+    }
+    @include respond(tab-port) {
+      font-size: 20px;
+    }
   }
-  @include respond(phone) {
-    max-width: 90%;
-    margin-bottom: 6rem;
+
+  p {
+    font-size: 16px;
+
+    @include respond(big-desktop) {
+      font-size: 18px;
+    }
+
+    @include respond(tab-port) {
+      font-size: 16px;
+    }
   }
 
   &__img {
     width: 100%;
     object-fit: cover;
-    margin-bottom: 6rem;
+    margin-bottom: 2rem;
     box-shadow: 3px 3px 3px 0px rgb(0, 0, 0);
     border-radius: 5px;
     z-index: 10;
     outline-offset: 2rem;
     transition: all 0.2s;
-
-    @include respond(tab-port) {
-    }
-    @include respond(phone) {
-    }
 
     &:hover {
       transform: scale(1.05) translateY(-0.5rem);
@@ -63,28 +69,14 @@
 }
 
 .about-btn {
-  margin-top: 6rem;
-  margin-left: 15rem;
+  margin-top: 4rem;
+  margin-left: 7%;
 
-  @include respond(big-desktop) {
-    margin-top: 8rem;
-    margin-bottom: 2rem;
-    margin-left: 8rem;
-  }
   @include respond(tab-land) {
-    margin-top: 8rem;
-    margin-bottom: 2rem;
-    margin-left: 12rem;
-  }
-  @include respond(tab-port) {
-    margin-top: 8rem;
-    margin-bottom: 2rem;
-    margin-left: 8rem;
-  }
-  @include respond(phone) {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-left: 5rem;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    margin-bottom: 1rem;
   }
 }
 

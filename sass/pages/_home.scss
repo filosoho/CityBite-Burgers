@@ -1,19 +1,18 @@
 .menu-section,
 .about-section,
-.story-section {
-  padding: 7rem 0;
+.story-section,
+.where-section {
+  position: relative;
+  padding: 4rem 0;
 
-  @include respond(tab-port) {
-    padding: 3rem 0;
+  @include respond(tab-land) {
+    padding: 2rem 0;
   }
+
 }
 
 .about-section {
   background-color: $white;
-
-  @include respond(tab-port) {
-    margin-top: 3rem;
-  }
 }
 
 .menu-section {
@@ -25,16 +24,11 @@
 }
 
 .where-section {
-  padding: 15rem 0;
   background-color: $black;
-
-  @include respond(tab-port) {
-    padding: 3rem 0;
-  }
 }
 
 .contact-section {
-  padding-top: 5rem;
+  padding-top: 4rem;
   background-color: $white;
 
   @include respond(tab-port) {

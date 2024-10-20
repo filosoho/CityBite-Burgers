@@ -1,56 +1,61 @@
 .heading-primary {
   color: $white;
-  margin-bottom: 2.5rem;
   font-weight: 400;
-
-  @include respond(tab-land) {
-    margin-bottom: 12rem;
-  }
-  @include respond(tab-port) {
-    margin-bottom: 12rem;
-  }
-  @include respond(phone) {
-    margin-bottom: 11rem;
-  }
 
   &--main {
     display: block;
     font-family: "Lora", serif;
     text-transform: uppercase;
-    font-size: 6rem;
+    font-size: 3.75rem;
     letter-spacing: 0.2rem;
 
+    @include respond(big-desktop) {
+      font-size: 3.75rem;
+    }
+    @include respond(tab-land) {
+      font-size: 2.8rem;
+    }
+    @include respond(tab-port) {
+      font-size: 2.4rem;
+    }
     @include respond(phone) {
-      font-size: 3rem;
+      font-size: 1.8rem;
     }
   }
 
   &--sub {
     display: block;
     font-family: "Caveat", cursive;
-    font-size: 2.6rem;
+    font-size: 2.4rem;
+
+    @include respond(tab-land) {
+      font-size: 2rem;
+    }
+    @include respond(tab-port) {
+      font-size: 1.8rem;
+    }
+    @include respond(phone) {
+      font-size: 1.4rem;
+    }
   }
 }
 
 .heading-secondary {
-  font-size: 4.8rem;
+  font-size: 3rem;
   font-weight: 700;
-  background-image: linear-gradient(to right, $white, #e0e0e0);
   -webkit-background-clip: text;
   color: transparent;
   transition: all 0.2s;
 
-  @include respond(big-desktop) {
-    font-size: 4.3rem;
-  }
   @include respond(tab-land) {
-    font-size: 4rem;
+    font-size: 2.8rem;
   }
   @include respond(tab-port) {
-    font-size: 3.2rem;
+    font-size: 2rem;
   }
   @include respond(phone) {
-    font-size: 2.4rem;
+    font-size: 1.8rem;
+    margin-inline: 1rem;
   }
 
   &:hover {
@@ -64,25 +69,30 @@
 }
 
 .contact-us {
-  background-image: linear-gradient(to right, $primary-light, $secondary-light);
+  color: black;
 }
 
 .heading-tertiary {
-  font-size: $default-font-size;
+  font-size: 1.2rem;
   font-weight: 700;
   text-transform: uppercase;
 
-  @include respond(phone) {
-    font-size: 2rem !important;
+  @include respond(big-desktop) {
+    font-size: 1.1rem;
   }
-
+  @include respond(tab-land) {
+    font-size: 1rem;
+  }
   @include respond(tab-port) {
-    font-size: 2.5rem;
+    font-size: 1.05rem;
+  }
+  @include respond(phone) {
+    font-size: 1rem;
   }
 }
 
 .paragraph {
-  font-size: $default-font-size;
+  font-size: 1.1rem;
 }
 
 .our-menu {
@@ -90,5 +100,6 @@
 }
 
 .welcome {
-  background-image: linear-gradient(to right, $primary-light, $secondary-light);
+  color: $black;
+  text-transform: capitalize;
 }

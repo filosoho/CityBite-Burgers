@@ -1,22 +1,18 @@
 .footer {
   background-color: $black;
-  padding: 3rem 0;
-  margin-top: 5rem;
+  padding: 2rem 0;
+  margin-top: 3rem;
 
   @include respond(tab-port) {
-    padding: 2rem 0;
+    padding: 1rem 0;
   }
 
   &__navigation {
-    width: 40vw;
+    width: 45vw;
     text-align: center;
-
     @include top-border;
 
     @include respond(tab-port) {
-      display: block;
-    }
-    @include respond(phone) {
       display: block;
     }
   }
@@ -31,22 +27,19 @@
       text-align: end;
       align-items: flex-end;
     }
-
-    @include respond(phone) {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      text-align: end;
-      align-items: flex-end;
-    }
   }
 
   &__item {
     display: inline-block;
-    margin-right: 5px;
+    margin-right: 20px;
+    margin-top: 1px;
+    margin-bottom: 0;
 
-    @include respond(phone) {
-      //   font-size: 1.2rem;
+    @include respond(tab-land) {
+      margin-right: 5px;
+    }
+    @include respond(tab-port) {
+      margin-right: 0;
     }
   }
 
@@ -71,12 +64,9 @@
   &__copyright {
     color: $grey-light-1;
     @include top-border;
-    width: 40vw;
-
+    width: 45vw;
     float: right;
 
-    @include respond(tab-port) {
-    }
     @include respond(phone) {
       float: none;
     }
@@ -88,7 +78,6 @@
 
   &__author {
     text-decoration: none;
-    text-transform: uppercase;
     display: inline-block;
     color: $secondary-4;
 
@@ -109,24 +98,21 @@
   }
 
   &__logo img {
-    width: 16rem;
+    width: 9rem;
 
     @include respond(phone) {
-      width: 6rem;
-      margin-bottom: 10px;
+      width: 3.5rem;
     }
   }
-}
-
-.footer-small {
-  font-size: 1.1rem;
 }
 
 .footer-width {
   display: flex;
   justify-content: space-between;
   margin: auto;
+  font-size: 12px;
+
   @include respond(phone) {
-    // margin-left: 3rem;
+    font-size: 10px;
   }
 }

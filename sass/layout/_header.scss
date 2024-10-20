@@ -1,9 +1,25 @@
 .header {
-  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   position: relative;
+  gap: 6rem;
 
+  @include respond(big-desktop) {
+    height: 660px;
+    gap: 4rem;
+  }
+  @include respond(tab-land) {
+    height: 660px;
+  }
+  @include respond(tab-port) {
+    height: 460px;
+    gap: 0;
+  }
   @include respond(phone) {
-    height: 65vh;
+    height: 360px;
   }
 
   &__slider--1 {
@@ -85,54 +101,51 @@
   }
 
   &__logo-box {
-    position: absolute;
-    top: 22%;
-    @include center-object;
-
-    @include respond(big-desktop) {
-      top: 18%;
-    }
-    @include respond(tab-land) {
-      top: 18%;
-    }
-    @include respond(tab-port) {
-      top: 18%;
-    }
-    @include respond(phone) {
-      top: 18%;
-    }
-    @include respond(phone) {
-      top: 18%;
-    }
+    z-index: 1;
+    margin-bottom: 1rem;
   }
 
   &__logo {
-    height: 25rem;
+    height: 15rem;
 
-    @include respond(phone) {
+    @include respond(big-desktop) {
+      height: 14rem;
+    }
+    @include respond(tab-land) {
       height: 13rem;
+    }
+    @include respond(tab-port) {
+      height: 11rem;
+    }
+    @include respond(phone) {
+      height: 9rem;
     }
   }
 
   &__text-box {
-    position: absolute;
-    top: 62%;
-    @include center-object;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    text-align: center;
+
+    @include respond(tab-land) {
+      max-width: 45%;
+    }
+    @include respond(tab-port) {
+      max-width: 400px;
+    }
+    @include respond(phone) {
+      max-width: 300px;
+    }
   }
 
   &__btn-box {
-    position: absolute;
-    top: 82%;
-    @include center-object;
+    margin-top: -2rem;
 
-    @include respond(big-desktop) {
-      margin-top: 2rem;
-    }
-    @include respond(tab-land) {
-      margin-top: 0;
-      top: 78%;
-    }
-    @include respond(phone) {
+    @include respond(tab-port) {
+      margin-top: 1rem;
     }
   }
 }

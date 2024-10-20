@@ -66,7 +66,7 @@
 				<div class="about-box">	
 					<img class="about-box__img about-box__img--1" alt="Image 1" src="img/1.png">
 					<h3 class="heading-tertiary u-margin-bottom-small">
-						DISCOVER CITYBITE BURGERS
+						Discover
 					</h3>
 					<p class="paragraph">
 						CityBite Burgers is your laid-back and friendly spot right in the heart of the city, 
@@ -80,7 +80,7 @@
 				<div class="about-box">
 					<img class="about-box__img about-box__img--2" alt="Image 2" src="img/2.png">	
 					<h3 class="heading-tertiary u-margin-bottom-small">
-						Our Commitment to Quality
+						Quality
 					</h3>
 					<p class="paragraph second-p">
 						At CityBiteBurgers, we take pride in using only the finest ingredients. Our beef is carefully selected for 
@@ -93,7 +93,7 @@
 				<div class="about-box">
 					<img class="about-box__img about-box__img--3" alt="Image 3" src="img/3.png">
 					<h3 class="heading-tertiary u-margin-bottom-small">
-						Your City Burger Destination 
+						Destination 
 					</h3>
 					<p class="paragraph">
 						When you step into CityBiteBurgers, you're not just visiting a restaurant; you're entering a burger lover's 
@@ -111,10 +111,10 @@
 			</div>
 		</div>
 	
-		<div class="menu-section" id="menu">
+		<div class="menu-section" id="menu" onclick="if(document.querySelector('.modal:target') || document.querySelector('.fullscreen-modal:target')) location.href='#menu'">
 			<div class="u-align-center u-margin-bottom-big">
-				<h2 class="heading-secondary">
-					OUR MENU					
+				<h2 class="heading-secondary white">
+					MENU					
 				</h2>
 			</div>
 			<div class="u-display-flex menu-container">
@@ -132,140 +132,424 @@
 					</div>
 				</div>
 			</div>			
-			<div class="menu-cards u-display-flex-evenly">				
-				<div class="menu-box menu-box--1">
+			<div class="menu-cards u-display-flex-evenly">	
+
+					<a href="#modal-burgers" class="menu-box menu-box--1">
 					<div class="menu-box__overlay"></div>
 					<h3 class="menu-box__title">Burgers</h3>
-					<div class="menu-box__content">
-						<h3 class="menu-box__heading heading-tertiary u-margin-bottom-sm-medium">Burgers</h3>
-						<p class="menu-box__text">
-							<li><span class="bold-menu">Classic Cheeseburger</span>
-								<br><br>
-								Our signature beef patty, cheddar cheese, lettuce, tomato, onion, and our special sauce. Served on a toasted brioche bun.
-							</li>
-							<br>
-							<li><span class="bold-menu">BBQ Bacon Burger</span>
-								<br><br>									
-								Beef patty, crispy bacon, cheddar cheese, lettuce, onion rings, and smoky BBQ sauce. Served on a fresh pretzel bun.
-							</li>
-							<br>
-							<li><span class="bold-menu">Veggie Delight (Vegetarian)</span>
-								<br><br>
-								A flavorful veggie patty with lettuce, tomato, avocado, red onion, and a zesty aioli sauce. Served on a whole wheat bun.
-							</li>
-							<br>
-							<li><span class="bold-menu">Spicy Jalapeño Burger</span>
-								<br><br>
-								Beef patty, pepper jack cheese, jalapeños, lettuce, and sriracha mayo. Served on a jalapeño-cheddar bun.
-							</li>
-						</p>			
+					</a>
+
+					<div id="modal-burgers" class="modal" >
+						<div class="background" onclick="event.stopPropagation();">
+							<a href="#menu" class="modal__close">&times;</a>
+							<div class="background__inner" >
+								<div class="modal__content">					
+									<img class="menu-logo" src="./img/menu-logo.png"/>
+								<h2>Burgers</h2>
+								<ul>
+									<li>
+									<div class="menu-item-box">
+										<div class="menu-desc">
+											<p><span class="bold-menu">Classic Cheeseburger</span>	
+											</p>									
+											<p>Our signature beef patty, cheddar cheese, lettuce, tomato, onion, and our special sauce. Served on a toasted brioche bun.
+											</p>
+										</div>
+											<a href="#modal-1" >
+												<img class="menu-img" alt="" src="img/burger-1.png" />
+											</a>										 
+									</div>		
+									</li>					
+									<li>	
+									<div class="menu-item-box">
+										<div class="menu-desc">
+											<p><span class="bold-menu">BBQ Bacon Burger</span>
+											</p>
+											<p>Beef patty, crispy bacon, cheddar cheese, lettuce, onion rings, and smoky BBQ sauce. Served on a fresh pretzel bun.
+											</p>
+											</div>
+											<a href="#modal-2">
+												<img class="menu-img" alt="" src="img/burger-2.png" />
+											</a>
+									</div>
+									</li>
+									<li>
+									<div class="menu-item-box">
+										<div class="menu-desc">
+											<p><span class="bold-menu">Veggie Delight (Vegetarian)</span>
+											</p>
+											<p>A flavorful veggie patty with lettuce, tomato, avocado, red onion, and a zesty aioli sauce. Served on a whole wheat bun.
+											</p>
+										</div>
+										<a href="#modal-3">
+											<img class="menu-img" alt="" src="img/burger-3.png" />
+										</a>
+									</div>
+									</li>
+									<li>
+									<div class="menu-item-box">
+										<div class="menu-desc">
+										<p><span class="bold-menu">Spicy Jalapeño Burger</span>
+										</p>
+										<p>Beef patty, pepper jack cheese, jalapeños, lettuce, and sriracha mayo. Served on a jalapeño-cheddar bun.
+										</p>
+										</div>
+										<a href="#modal-4">
+											<img class="menu-img" alt="" src="img/burger-4.png" />
+										</a>	
+									</div>
+									</li>
+									<li>
+										<div class="menu-item-box">
+											<div class="menu-desc">
+											<p><span class="bold-menu">Truffle Mushroom Burger</span>
+											</p>
+											<p>Juicy beef patty, sautéed mushrooms, Swiss cheese, arugula, caramelized onions, and a creamy truffle aioli. Served on a toasted ciabatta bun.
+											</p>
+											</div>
+											<a href="#modal-5a">
+												<img class="menu-img" alt="" src="img/burger-5.png" />
+											</a>	
+										</div>
+									</li>
+								</ul>
+								</div>
+							</div>
+						</div>
 					</div>
-				</div>
+					<div id="modal-1" class="fullscreen-modal">
+						<a href="#modal-burgers" class="close-modal">&times;</a>
+						<img class="fullscreen-content" src="img/burger-1.png" alt="Full image 1" />
+					</div>
+					<div id="modal-2" class="fullscreen-modal">
+						<a href="#modal-burgers" class="close-modal">&times;</a>
+						<img class="fullscreen-content" src="img/burger-2.png" alt="Full image 2" />
+					</div>
+					<div id="modal-3" class="fullscreen-modal">
+						<a href="#modal-burgers" class="close-modal">&times;</a>
+						<img class="fullscreen-content" src="img/burger-3.png" alt="Full image 3" />
+					</div>
+					<div id="modal-4" class="fullscreen-modal">
+						<a href="#modal-burgers" class="close-modal">&times;</a>
+						<img class="fullscreen-content" src="img/burger-4.png" alt="Full image 4" />
+					</div>
+					<div id="modal-5a" class="fullscreen-modal">
+						<a href="#modal-burgers" class="close-modal">&times;</a>
+						<img class="fullscreen-content" src="img/burger-5.png" alt="Full image 5a" />
+					</div>
 		
-				<div class="menu-box menu-box--2">
+				<a href="#modal-sides" class="menu-box menu-box--2">
 					<div class="menu-box__overlay"></div>
 					<h3 class="menu-box__title">Sides</h3>
-					<div class="menu-box__content">
-						<h3 class="menu-box__heading heading-tertiary u-margin-bottom-sm-medium">Sides</h3>
-						<p class="menu-box__text">
-							<li><span class="bold-menu">French Fries</span>
-								<br><br>
-								Crispy golden fries served with ketchup or your choice of dipping sauce.
-							</li>
-							<br>
-							<li><span class="bold-menu">Sweet Potato Fries</span>
-								<br><br>
-								Sweet and savory, a delightful twist on traditional fries.
-							</li>
-							<br>									
-							<li><span class="bold-menu">Onion Rings	</span>								
-								<br><br>
-								Thick-cut onion rings with a crunchy, seasoned coating.
-							</li>
-							<br>								
-							<li><span class="bold-menu">Mozzarella Sticks</span>										
-								<br><br>
-								Sweet and savory, a delightful twist on traditional fries.
-							</li>
-							<br>
-							<li><span class="bold-menu">Loaded Nachos</span>										
-								<br><br>
-								Crispy tortilla chips topped with melted cheese, jalapeños, sour cream, and guacamole.
-							</li>
-						</p>			
+				</a>
+				<div id="modal-sides" class="modal">
+					<div class="background" onclick="event.stopPropagation();">
+						<a href="#menu" class="modal__close">&times;</a>
+						<div class="background__inner">
+							<div class="modal__content">
+							<img class="menu-logo" src="./img/menu-logo.png"/>
+							<h2>Sides</h2>
+							<ul>
+								<li>
+								<div class="menu-item-box">
+									<div class="menu-desc">
+										<p><span class="bold-menu">French Fries</span>	
+										</p>										
+										<p>Crispy golden fries served with ketchup or your choice of dipping sauce.
+										</p>
+									</div>
+									<a href="#modal-5" >
+										<img class="menu-img" alt="" src="img/sides-1.png" />
+									</a>
+								</div>		
+								</li>						
+								<li>
+								<div class="menu-item-box">
+									<div class="menu-desc">
+										<p><span class="bold-menu">Sweet Potato Fries</span>
+										</p>
+										<p>Sweet and savory, a delightful twist on traditional fries.
+										</p>
+										</div>
+										<a href="#modal-6" >
+											<img class="menu-img" alt="" src="img/sides-2.png" />
+										</a>
+								</div>
+								</li>
+								<li>
+								<div class="menu-item-box">
+									<div class="menu-desc">
+										<p><span class="bold-menu">Onion Rings</span>
+										</p>
+										<p>Thick-cut onion rings with a crunchy, seasoned coating.
+										</p>
+									</div>
+									<a href="#modal-7" >
+										<img class="menu-img" alt="" src="img/sides-3.png" />
+									</a>	
+								</div>
+								</li>
+								<li>
+								<div class="menu-item-box">
+									<div class="menu-desc">
+									<p><span class="bold-menu">Mozzarella Sticks</span>
+									</p>
+									<p>Sweet and savory, a delightful twist on traditional fries.
+									</p>
+									</div>
+									<a href="#modal-8" >
+										<img class="menu-img" alt="" src="img/sides-4.png" />
+									</a>
+								</div>
+								</li>
+								<li>
+								<div class="menu-item-box">
+									<div class="menu-desc">
+									<p><span class="bold-menu">Loaded Nachos</span>
+									</p>
+									<p>Crispy tortilla chips topped with melted cheese, jalapeños, sour cream, and guacamole.
+									</p>
+									</div>
+									<a href="#modal-9" >
+										<img class="menu-img" alt="" src="img/sides-5.png" />
+									</a>
+								</div>
+								</li>
+							</ul>
+							</div>
+						</div>
 					</div>
+				</div>
+				<div id="modal-5" class="fullscreen-modal">
+					<a href="#modal-sides" class="close-modal">&times;</a>
+					<img class="fullscreen-content" src="img/sides-1.png" alt="Full image 5" />
+				</div>
+				<div id="modal-6" class="fullscreen-modal">
+					<a href="#modal-sides" class="close-modal">&times;</a>
+					<img class="fullscreen-content" src="img/sides-2.png" alt="Full image 6" />
+				</div>
+				<div id="modal-7" class="fullscreen-modal">
+					<a href="#modal-sides" class="close-modal">&times;</a>
+					<img class="fullscreen-content" src="img/sides-3.png" alt="Full image 7" />
+				</div>
+				<div id="modal-8" class="fullscreen-modal">
+					<a href="#modal-sides" class="close-modal">&times;</a>
+					<img class="fullscreen-content" src="img/sides-4.png" alt="Full image 8" />
+				</div>
+				<div id="modal-9" class="fullscreen-modal">
+					<a href="#modal-sides" class="close-modal">&times;</a>
+					<img class="fullscreen-content" src="img/sides-5.png" alt="Full image 9" />
 				</div>
 
-				<div class="menu-box menu-box--3">
+				<a href="#modal-desserts" class="menu-box menu-box--3">
 					<div class="menu-box__overlay"></div>
 					<h3 class="menu-box__title">Desserts</h3>
-					<div class="menu-box__content">
-						<h3 class="menu-box__heading heading-tertiary u-margin-bottom-sm-medium">Desserts</h3>
-						<p class="menu-box__text">
-							<li><span class="bold-menu">Chocolate Brownie Sundae</span>
-								<br><br>
-								Warm chocolate brownie topped with vanilla ice cream, chocolate sauce, and whipped cream.
-							</li>
-							<br>
-							<li><span class="bold-menu">New York Cheesecake</span>									
-								<br><br>
-								Creamy cheesecake served with a raspberry coulis and fresh berries.
-							</li>
-							<br>
-							<li><span class="bold-menu">Molten Lava Cake	</span>									
-								<br><br>
-								A rich and gooey chocolate cake with a molten center, served with a scoop of ice cream.
-							</li>
-							<br>
-							<li><span class="bold-menu">Fruit Parfait</span>
-								<br><br>
-								Layers of yogurt, granola, and fresh seasonal fruits.
-							</li>
-							<br>
-							<li><span class="bold-menu">Churros	</span>									
-								<br><br>
-								Fried dough pastries coated in cinnamon sugar, served with chocolate dipping sauce.
-							</li>	
-						</p>				
+					</a>
+
+					<div id="modal-desserts" class="modal">
+						<div class="background" onclick="event.stopPropagation();">
+							<a href="#menu" class="modal__close">&times;</a>
+							<div class="background__inner">
+								<div class="modal__content">
+								<img class="menu-logo" src="./img/menu-logo.png"/>
+								<h2>Desserts</h2>
+								<ul>
+									<li>
+									<div class="menu-item-box">
+										<div class="menu-desc">
+											<p><span class="bold-menu">Chocolate Brownie Sundae</span>	
+											</p>									
+											<p>Warm chocolate brownie topped with vanilla ice cream, chocolate sauce, and whipped cream.
+											</p>
+										</div>
+										<a href="#modal-10" >
+											<img class="menu-img" alt="" src="img/desserts-1.png" />
+										</a>
+									</div>		
+									</li>					
+									<li>	
+									<div class="menu-item-box">
+										<div class="menu-desc">
+											<p><span class="bold-menu">New York Cheesecake</span>
+											</p>
+											<p>Creamy cheesecake served with a raspberry coulis and fresh berries.
+											</p>
+											</div>
+											<a href="#modal-11" >
+												<img class="menu-img" alt="" src="img/desserts-2.png" />
+											</a>
+									</div>
+									</li>
+									<li>
+									<div class="menu-item-box">
+										<div class="menu-desc">
+											<p><span class="bold-menu">Molten Lava Cake</span>
+											</p>
+											<p>A rich and gooey chocolate cake with a molten center, served with a scoop of ice cream.
+											</p>
+										</div>
+										<a href="#modal-12" >
+											<img class="menu-img" alt="" src="img/desserts-3.png" />
+										</a>
+									</div>
+									</li>
+									<li>
+									<div class="menu-item-box">
+										<div class="menu-desc">
+										<p><span class="bold-menu">Fruit Parfait</span>
+										</p>
+										<p>Layers of yogurt, granola, and fresh seasonal fruits.
+										</p>
+										</div>
+										<a href="#modal-13" >
+											<img class="menu-img" alt="" src="img/desserts-4.png" />
+										</a>
+									</div>
+									</li>
+									<li>
+										<div class="menu-item-box">
+											<div class="menu-desc">
+											<p><span class="bold-menu">Churros</span>
+											</p>
+											<p>Fried dough pastries coated in cinnamon sugar, served with chocolate dipping sauce.
+											</p>
+											</div>
+											<a href="#modal-14">
+												<img class="menu-img" alt="" src="img/desserts-5.png" />
+											</a>
+										</div>
+										</li>
+								</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="modal-10" class="fullscreen-modal">
+						<a href="#modal-desserts" class="close-modal">&times;</a>
+						<img class="fullscreen-content" src="img/desserts-1.png" alt="Full image 5" />
+					</div>
+					<div id="modal-11" class="fullscreen-modal">
+						<a href="#modal-desserts" class="close-modal">&times;</a>
+						<img class="fullscreen-content" src="img/desserts-2.png" alt="Full image 6" />
+					</div>
+					<div id="modal-12" class="fullscreen-modal">
+						<a href="#modal-desserts" class="close-modal">&times;</a>
+						<img class="fullscreen-content" src="img/desserts-3.png" alt="Full image 7" />
+					</div>
+					<div id="modal-13" class="fullscreen-modal">
+						<a href="#modal-desserts" class="close-modal">&times;</a>
+						<img class="fullscreen-content" src="img/desserts-4.png" alt="Full image 8" />
+					</div>
+					<div id="modal-14" class="fullscreen-modal">
+						<a href="#modal-desserts" class="close-modal">&times;</a>
+						<img class="fullscreen-content" src="img/desserts-5.png" alt="Full image 9" />
+					</div>
+			
+					<a href="#modal-beverages" class="menu-box menu-box--4">
+						<div class="menu-box__overlay"></div>
+						<h3 class="menu-box__title">Beverages</h3>
+					</a>
+					<div id="modal-beverages" class="modal">
+						<div class="background" onclick="event.stopPropagation();">
+							<a href="#menu" class="modal__close">&times;</a>
+							<div class="background__inner">
+								<div class="modal__content">
+								<img class="menu-logo" src="./img/menu-logo.png"/>
+								<h2>Beverages</h2>
+								<ul>
+									<li>
+									<div class="menu-item-box">
+										<div class="menu-desc">
+											<p><span class="bold-menu">Soda</span>	
+											</p>									
+											<p>Choose from a variety of soft drinks, including cola, lemon-lime, orange and more. Soda is served with ice-cubes.
+											</p>
+										</div>
+										<a href="#modal-15">
+											<img class="menu-img" alt="" src="img/drinks-1.png" />
+										</a>
+									</div>		
+									</li>						
+									<li>
+									<div class="menu-item-box">
+										<div class="menu-desc">
+											<p><span class="bold-menu">Iced Tea</span>
+											</p>
+											<p>Classic iced tea available sweetened or unsweetened.
+											</p>
+											</div>
+											<a href="#modal-16">
+												<img class="menu-img" alt="" src="img/drinks-2.png" />
+											</a>
+									</div>
+									</li>
+									<li>
+									<div class="menu-item-box">
+										<div class="menu-desc">
+											<p><span class="bold-menu">Milkshakes</span>
+											</p>
+											<p>Creamy milkshakes in flavors like vanilla, chocolate, and strawberry.
+											</p>
+										</div>
+										<a href="#modal-17" >
+											<img class="menu-img" alt="" src="img/drinks-3.png" />
+										</a>
+									</div>
+									</li>
+									<li>
+									<div class="menu-item-box">
+										<div class="menu-desc">
+										<p><span class="bold-menu">Fruit Smoothies</span>
+										</p>
+										<p>Refreshing smoothies made with your choice of fruits and yogurt.
+										</p>
+										</div>
+										<a href="#modal-18" >
+											<img class="menu-img" alt="" src="img/drinks-4.png" />
+										</a>
+									</div>
+									</li>
+									<li>
+									<div class="menu-item-box">
+										<div class="menu-desc">
+										<p><span class="bold-menu">Coffee</span>
+										</p>
+										<p>Freshly brewed coffee with the option of cream and sugar.
+										</p>
+										</div>
+										<a href="#modal-19" >
+											<img class="menu-img" alt="" src="img/drinks-5.png" />
+										</a>
+									</div>
+									</li>
+								</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="modal-15" class="fullscreen-modal">
+						<a href="#modal-beverages" class="close-modal">&times;</a>
+						<img class="fullscreen-content" src="img/drinks-1.png" alt="Full image 5" />
+					</div>
+					<div id="modal-16" class="fullscreen-modal">
+						<a href="#modal-beverages" class="close-modal">&times;</a>
+						<img class="fullscreen-content" src="img/drinks-2.png" alt="Full image 6" />
+					</div>
+					<div id="modal-17" class="fullscreen-modal">
+						<a href="#modal-beverages" class="close-modal">&times;</a>
+						<img class="fullscreen-content" src="img/drinks-3.png" alt="Full image 7" />
+					</div>
+					<div id="modal-18" class="fullscreen-modal">
+						<a href="#modal-beverages" class="close-modal">&times;</a>
+						<img class="fullscreen-content" src="img/drinks-4.png" alt="Full image 8" />
+					</div>
+					<div id="modal-19" class="fullscreen-modal">
+						<a href="#modal-beverages" class="close-modal">&times;</a>
+						<img class="fullscreen-content" src="img/drinks-5.png" alt="Full image 9" />
 					</div>
 				</div>
-			
-				<div class="menu-box menu-box--4">
-					<div class="menu-box__overlay"></div>
-					<h3 class="menu-box__title">Beverages</h3>
-					<div class="menu-box__content">
-						<h3 class="menu-box__heading heading-tertiary u-margin-bottom-sm-medium">Beverages</h3>
-						<p class="menu-box__text">
-							<li><span class="bold-menu">Soda</span>									
-								<br><br>
-								Choose from a variety of soft drinks, including cola, lemon-lime, and more.
-							</li>
-							<br>								
-							<li><span class="bold-menu">Iced Tea	</span>									
-								<br><br>
-								Classic iced tea available sweetened or unsweetened.
-							</li>
-							<br>
-							<li><span class="bold-menu">Milkshakes</span>										
-								<br><br>
-								Creamy milkshakes in flavors like vanilla, chocolate, and strawberry.
-							</li>
-							<br>	
-							<li><span class="bold-menu">Fruit Smoothies</span>										
-								<br><br>
-								Refreshing smoothies made with your choice of fruits and yogurt.
-							</li>
-							<br>	
-							<li><span class="bold-menu">Coffee</span>										
-								<br><br>
-								Freshly brewed coffee with the option of cream and sugar.
-							</li>		
-						</p>
-					</div>
-				</div>		
 			</div>
-			</div>
-		</div>	
+							
 		<div class="story-section" id="our-story">
 			<h2 class="heading-secondary white">
 				<div class="u-align-center u-margin-bottom-big">
@@ -312,12 +596,12 @@
 			</div>
 		</div>
 		<div class="where-section" id="visit-us">
-			<h2 class="heading-secondary">
+			<h2 class="heading-secondary white">
 				<div class="u-align-center u-margin-bottom-big">
 					WHERE TO FIND US 
 				</div>
 			</h2>
-			<div class="row where-row">
+			<div class="row location-row">
 				<div class="col-1-of-4">
 					<div class="location">
 						<div class="location__side location__side--front">
@@ -332,7 +616,7 @@
 										Our Times Square location is right in the heart of the city's entertainment hub. 
 										Indulge in our mouthwatering burgers amidst the bright lights and bustling energy of Times Square.
 									</p>
-									<a href="#" class="btn btn--black">Book Now</a>
+									<a href="#contact" class="btn btn--white">Book Now</a>
 								</div>
 							</div>
 						</div>
@@ -352,7 +636,7 @@
 										Visit our Central Park spot for a taste of nature and delicious flavors. 
 										Enjoy our delectable burgers while surrounded by the green serenity of Central Park
 									</p>
-									<a href="#" class="btn btn--black">Book Now</a>
+									<a href="#contact" class="btn btn--white">Book Now</a>
 								</div>
 							</div>
 						</div>
@@ -372,7 +656,7 @@
 										Savor our signature burgers at the Empire State Bites location. 
 										Relish the iconic taste while taking in breathtaking views of the Empire State Building and the city skyline.
 									</p>
-									<a href="#" class="btn btn--black">Book Now</a>
+									<a href="#contact" class="btn btn--white">Book Now</a>
 								</div>
 							</div>
 						</div>
@@ -392,7 +676,7 @@
 										Our Brooklyn location is a culinary adventure waiting to be explored. 
 										Relish our mouthwatering burgers while immersing yourself in the artistic and cultural atmosphere of Brooklyn.
 									</p>
-									<a href="#" class="btn btn--black">Book Now</a>
+									<a href="#contact" class="btn btn--white">Book Now</a>
 								</div>
 							</div>
 						</div>
@@ -475,7 +759,7 @@
 						<p></p>&copy; <script>document.write(new Date().getFullYear())</script> Filosoho Space. AllRights Reserved.</p>
 						<br>
 						<span class="footer-small">
-							Project from course by <a href="#" class="footer__author">Nahid Akhter </a> and <a href="#" class="footer__author"> Juan Galvan.</a>
+							Project from course by <p class="footer__author">Nahid Akhter </p> and <p class="footer__author"> Juan Galvan.</p>
 						</span>
 					</div>
 				</div>

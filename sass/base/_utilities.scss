@@ -16,14 +16,13 @@
 }
 
 .u-margin-sides {
-  text-align: left;
+  text-align: center;
   margin-inline: 1rem;
   padding: 1rem;
-
 }
 
 .u-margin-bottom-small {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .u-margin-bottom-sm-medium {
@@ -35,10 +34,5 @@
 }
 
 .u-margin-bottom-big {
-  margin-bottom: 8rem;
-
-  @include respond(phone) {
-    margin-top: 2rem;
-    margin-bottom: 6rem;
-  }
+  margin-bottom: 3rem;
 }
