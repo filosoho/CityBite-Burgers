@@ -2243,7 +2243,7 @@ li {
 .story-section,
 .where-section {
   position: relative;
-  padding: 4rem 0;
+  padding: 4rem 0 5rem;
 }
 @media only screen and (max-width: 1024px) {
   .menu-section,

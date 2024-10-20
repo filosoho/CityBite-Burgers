@@ -3,12 +3,11 @@
 .story-section,
 .where-section {
   position: relative;
-  padding: 4rem 0;
+  padding: 4rem 0 5rem;
 
   @include respond(tab-land) {
     padding: 2rem 0;
   }
-
 }
 
 .about-section {
