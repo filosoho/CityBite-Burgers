@@ -30,23 +30,13 @@
     height: 100%;
     background-image: linear-gradient(
         to right bottom,
-        rgba($primary-light, 0.7),
-        rgba($primary-dark, 0.7)
+        rgba($primary-dark, 0.7),
+        rgba($primary-dark-1, 0.7)
       ),
       url(img/header-image-1-small.jpg);
     background-position: top;
     background-size: cover;
     animation: fade1 20s infinite;
-
-    @media (min-resolution: 192dpi) and (min-width: 480px),
-      (min-width: 1201px) {
-      background-image: linear-gradient(
-          to right bottom,
-          rgba(4, 2, 55, 0.7),
-          rgba(42, 49, 97, 0.7)
-        ),
-        url(img/header-image-1-medium.jpg);
-    }
   }
 
   &__slider--2 {
@@ -57,8 +47,8 @@
     height: 100%;
     background-image: linear-gradient(
         to right bottom,
-        rgba($primary-light, 0.7),
-        rgba($primary-dark, 0.7)
+        rgba($primary-dark, 0.7),
+        rgba($primary-dark-1, 0.7)
       ),
       url(img/header-image-2-medium.jpg);
     background-position: top;
@@ -74,8 +64,8 @@
     height: 100%;
     background-image: linear-gradient(
         to right bottom,
-        rgba($primary-light, 0.7),
-        rgba($primary-dark, 0.7)
+        rgba($primary-dark, 0.7),
+        rgba($primary-dark-1, 0.7)
       ),
       url(img/header-image-3-medium.jpg);
     background-position: top;
@@ -91,8 +81,8 @@
     height: 100%;
     background-image: linear-gradient(
         to right bottom,
-        rgba($primary-light, 0.7),
-        rgba($primary-dark, 0.7)
+        rgba($primary-dark, 0.7),
+        rgba($primary-dark-1, 0.7)
       ),
       url(img/header-image-4-medium.jpg);
     background-position: top;
