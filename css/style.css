@@ -118,7 +118,8 @@ body {
   }
 }
 
-a {
+a,
+label {
   -webkit-tap-highlight-color: transparent;
   outline: none;
   text-decoration: none;
@@ -126,7 +127,9 @@ a {
 }
 
 a:focus,
-a:active {
+a:active,
+label:focus,
+label:active {
   -webkit-tap-highlight-color: transparent;
   outline: none;
   text-decoration: none;
@@ -2156,7 +2159,7 @@ li {
   opacity: 1;
 }
 .form__radio-label {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #fff;
   cursor: pointer;
   display: flex;
