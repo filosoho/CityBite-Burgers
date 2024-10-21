@@ -1296,7 +1296,7 @@ a:active {
 }
 @media only screen and (max-width: 1201px) {
   .background {
-    width: 95vw;
+    width: 98vw;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -1304,9 +1304,14 @@ a:active {
     width: 98vw;
   }
 }
+@media only screen and (max-width: 768px) {
+  .background {
+    width: 98vw;
+  }
+}
 @media only screen and (max-width: 480px) {
   .background {
-    width: 100vw;
+    width: 100vh;
     border-radius: 0;
   }
 }
@@ -1317,7 +1322,7 @@ a:active {
   justify-content: center;
   background-color: rgb(255, 255, 255);
   width: 65vw;
-  height: 98vh;
+  height: 96vh;
   border: 20px solid rgba(0, 0, 0, 0.5);
   border-radius: 20px;
 }
