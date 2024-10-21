@@ -19,6 +19,9 @@
     max-width: 65vw;
     margin-bottom: 4rem;
   }
+  @include respond(phone) {
+    max-width: 90%;
+  }
 
   h3 {
     align-self: center;
