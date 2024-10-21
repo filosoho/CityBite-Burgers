@@ -16,7 +16,7 @@
   margin-inline: auto;
 
   @include respond(tab-land) {
-    max-width: 90%;
+    max-width: 65vw;
     margin-bottom: 4rem;
   }
 
@@ -52,14 +52,14 @@
     box-shadow: 3px 3px 3px 0px rgb(0, 0, 0);
     border-radius: 5px;
     z-index: 10;
-    outline-offset: 2rem;
-    transition: all 0.2s;
+    outline-offset: 1rem;
+    transition: all 0.12s;
 
     &:hover {
-      transform: scale(1.05) translateY(-0.5rem);
-      box-shadow: 4px 4px 12px -3px rgb(0, 0, 0);
+      transform: scale(1.02) translateY(-0.2rem);
+      box-shadow: 4px 4px 5px 2px rgb(0, 0, 0);
       z-index: 20;
-      outline: 0.1rem solid #0e0000;
+      outline: 0.25rem dotted #0e0000;
     }
 
     &:hover &:__img:not(:hover) {
