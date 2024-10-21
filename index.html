@@ -19,7 +19,8 @@
 
 		<title>CityBite Burgers - Where Flavor Meets the Urban Pulse!</title>
 	</head>
-	<body>
+	<body>	
+
 		<div class="navigation">
 			<input type="checkbox" class="navigation__checkbox" id="navi-toggle">
 			<label for="navi-toggle" class="navigation__button">
@@ -36,7 +37,8 @@
 					<li class="navigation__item"><a href="#contact" class="navigation__link" onclick="document.getElementById('navi-toggle').checked = false;">Contact Us</a></li>
 				</ul>
 			</nav>
-		</div>	
+		</div>
+
 		<header class="header" id="home">
 			<div class="header__slider--1"></div>
 			<div class="header__slider--2"></div>
@@ -74,8 +76,7 @@
 						high-quality burgers is what sets us apart. Whether you're a fan of classic cheeseburgers, 
 						prefer a spicy twist, or opt for a vegetarian delight, we have something to satisfy every craving. 
 						We're not just a restaurant; we're a place where food enthusiasts gather to enjoy the perfect burger experience.
-					</p>	
-
+					</p>
 				</div>
 				<div class="about-box">
 					<img class="about-box__img about-box__img--2" alt="Image 2" src="img/2.png">	
@@ -87,8 +88,7 @@
 						its flavor and juiciness. Our produce is always fresh and locally sourced whenever possible. 
 						We believe that a great burger starts with great ingredients, and we're committed to delivering a dining 
 						experience that exceeds your expectations. Quality is not just a promise; it's a guarantee.
-					</p>
-				
+					</p>				
 				</div>
 				<div class="about-box">
 					<img class="about-box__img about-box__img--3" alt="Image 3" src="img/3.png">
@@ -106,11 +106,10 @@
 				
 			</div>						
 			<div class="about-btn">
-				<a href="#" class="btn-rectangular">Learn More &rarr;</a></div>
-			</div>
+				<a href="#" class="btn-rectangular">Learn More &rarr;
+				</a>
 			</div>
 		</div>
-	
 		<div class="menu-section" id="menu" onclick="if(document.querySelector('.modal:target') || document.querySelector('.fullscreen-modal:target')) location.href='#menu'">
 			<div class="u-align-center u-margin-bottom-big">
 				<h2 class="heading-secondary white">
@@ -548,8 +547,7 @@
 						<img class="fullscreen-content" src="img/drinks-5.png" alt="Full image 9" />
 					</div>
 				</div>
-			</div>
-							
+		</div>							
 		<div class="story-section" id="our-story">
 			<h2 class="heading-secondary white">
 				<div class="u-align-center u-margin-bottom-big">
@@ -765,5 +763,24 @@
 				</div>
 			</div>
 		</footer>
+
+		<script>
+			const modals = document.querySelectorAll('.modal');
+	
+			modals.forEach(modal => {
+				modal.addEventListener('click', function() {
+					if (modal.style.display !== 'none') {
+						document.body.style.overflow = 'hidden';
+					} else {
+						document.body.style.overflow = 'auto';
+					}
+				});
+			});
+	
+			window.addEventListener('hashchange', function() {
+				const isModalOpen = window.location.hash.startsWith('#modal-');
+				document.body.style.overflow = isModalOpen ? 'hidden' : 'auto';
+			});
+		</script>
 	</body>
 </html>
