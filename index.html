@@ -1,786 +1,1111 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="stylesheet" type="text/css" href="vendors/fonts/icon-styles.css">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="vendors/fonts/icon-styles.css"
+    />
 
-		<!-- Fonts -->
-		<link href='http://fonts.googleapis.com/css?family=Lora|Satisfy:100,300,400,700,900' rel='stylesheet' type='text/css'>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Antic+Slab&family=Archivo+Black&family=Bree+Serif&family=Caveat&family=Varela&family=Varela+Round&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link
+      href="http://fonts.googleapis.com/css?family=Lora|Satisfy:100,300,400,700,900"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Antic+Slab&family=Archivo+Black&family=Bree+Serif&family=Caveat&family=Varela&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
 
-		<!--FAVICONS-->
-		<link rel="apple-touch-icon" sizes="180x180" href="vendors/favicon/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="vendors/favicon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="vendors/favicon/favicon-16x16.png">
-		<link rel="manifest" href="vendors/favicon/site.webmanifest">
+    <!--FAVICONS-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="vendors/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="vendors/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="vendors/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="vendors/favicon/site.webmanifest" />
 
-		<title>CityBite Burgers - Where Flavor Meets the Urban Pulse!</title>
-	</head>
-	<body>	
+    <title>CityBite Burgers - Where Flavor Meets the Urban Pulse!</title>
+  </head>
+  <body>
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+      <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+      </label>
+      <div class="navigation__background">&nbsp;</div>
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a
+              href="#home"
+              class="navigation__link"
+              onclick="document.getElementById('navi-toggle').checked = false;"
+              >Home</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a
+              href="#about"
+              class="navigation__link"
+              onclick="document.getElementById('navi-toggle').checked = false;"
+              >About Us</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a
+              href="#our-story"
+              class="navigation__link"
+              onclick="document.getElementById('navi-toggle').checked = false;"
+              >Our Story</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a
+              href="#menu"
+              class="navigation__link"
+              onclick="document.getElementById('navi-toggle').checked = false;"
+              >Menu</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a
+              href="#visit-us"
+              class="navigation__link"
+              onclick="document.getElementById('navi-toggle').checked = false;"
+              >Visit Us</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a
+              href="#contact"
+              class="navigation__link"
+              onclick="document.getElementById('navi-toggle').checked = false;"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
 
-		<div class="navigation">
-			<input type="checkbox" class="navigation__checkbox" id="navi-toggle">
-			<label for="navi-toggle" class="navigation__button">
-				<span class="navigation__icon">&nbsp;</span>
-			</label>
-			<div class="navigation__background">&nbsp;</div>
-			<nav class="navigation__nav">
-				<ul class="navigation__list">
-					<li class="navigation__item"><a href="#home" class="navigation__link" onclick="document.getElementById('navi-toggle').checked = false;">Home</a></li>
-					<li class="navigation__item"><a href="#about" class="navigation__link" onclick="document.getElementById('navi-toggle').checked = false;">About Us</a></li>
-					<li class="navigation__item"><a href="#our-story" class="navigation__link" onclick="document.getElementById('navi-toggle').checked = false;">Our Story</a></li>
-					<li class="navigation__item"><a href="#menu" class="navigation__link" onclick="document.getElementById('navi-toggle').checked = false;">Menu</a></li>
-					<li class="navigation__item"><a href="#visit-us" class="navigation__link" onclick="document.getElementById('navi-toggle').checked = false;">Visit Us</a></li>
-					<li class="navigation__item"><a href="#contact" class="navigation__link" onclick="document.getElementById('navi-toggle').checked = false;">Contact Us</a></li>
-				</ul>
-			</nav>
-		</div>
+    <header class="header" id="home">
+      <div class="header__slider--1"></div>
+      <div class="header__slider--2"></div>
+      <div class="header__slider--3"></div>
+      <div class="header__slider--4"></div>
+      <div class="header__logo-box">
+        <img
+          src="img/logo-burger.png"
+          alt="CityBite Burgers Logo"
+          class="header__logo"
+        />
+      </div>
+      <div class="header__text-box">
+        <h1 class="heading-primary">
+          <span class="heading-primary--main">Where Flavor Meets</span>
+          <span class="heading-primary--sub">the Urban Pulse!</span>
+        </h1>
+      </div>
+      <div class="header__btn-box">
+        <a href="#contact" class="btn btn--black">Order</a>
+        <a href="#menu" class="btn btn--white">Menu</a>
+      </div>
+    </header>
+    <div class="about-section" id="about">
+      <h2 class="heading-secondary welcome">
+        <div class="u-align-center u-margin-bottom-big">
+          Welcome to CityBite Burgers!
+        </div>
+      </h2>
+      <div class="row about-container">
+        <div class="about-box">
+          <img
+            class="about-box__img about-box__img--1"
+            alt="Image 1"
+            src="img/1.png"
+          />
+          <h3 class="heading-tertiary u-margin-bottom-small">Discover</h3>
+          <p class="paragraph">
+            CityBite Burgers is your laid-back and friendly spot right in the
+            heart of the city, where you can savor the most mouthwatering
+            burgers around. Our passion for serving delicious, high-quality
+            burgers is what sets us apart. Whether you're a fan of classic
+            cheeseburgers, prefer a spicy twist, or opt for a vegetarian
+            delight, we have something to satisfy every craving. We're not just
+            a restaurant; we're a place where food enthusiasts gather to enjoy
+            the perfect burger experience.
+          </p>
+        </div>
+        <div class="about-box">
+          <img
+            class="about-box__img about-box__img--2"
+            alt="Image 2"
+            src="img/2.png"
+          />
+          <h3 class="heading-tertiary u-margin-bottom-small">Quality</h3>
+          <p class="paragraph second-p">
+            At CityBiteBurgers, we take pride in using only the finest
+            ingredients. Our beef is carefully selected for its flavor and
+            juiciness. Our produce is always fresh and locally sourced whenever
+            possible. We believe that a great burger starts with great
+            ingredients, and we're committed to delivering a dining experience
+            that exceeds your expectations. Quality is not just a promise; it's
+            a guarantee.
+          </p>
+        </div>
+        <div class="about-box">
+          <img
+            class="about-box__img about-box__img--3"
+            alt="Image 3"
+            src="img/3.png"
+          />
+          <h3 class="heading-tertiary u-margin-bottom-small">Destination</h3>
+          <p class="paragraph">
+            When you step into CityBiteBurgers, you're not just visiting a
+            restaurant; you're entering a burger lover's paradise. Our cozy and
+            inviting atmosphere is the perfect backdrop for a meal with friends,
+            family, or a quick solo lunch. With friendly staff and a diverse
+            menu, we're confident that your visit will be the first of many.
+            Join us at CityBiteBurgers and indulge in the flavors that make us
+            the talk of the town.
+          </p>
+        </div>
+      </div>
+      <div class="about-btn">
+        <a href="#" class="btn-rectangular">Learn More &rarr; </a>
+      </div>
+    </div>
+    <div
+      class="menu-section"
+      id="menu"
+      onclick="if(document.querySelector('.modal:target') || document.querySelector('.fullscreen-modal:target')) location.href='#menu'"
+    >
+      <div class="u-align-center u-margin-bottom-big">
+        <h2 class="heading-secondary white">MENU</h2>
+      </div>
+      <div class="u-display-flex menu-container">
+        <div class="our-menu">
+          <div class="u-align-center u-margin-sides">
+            <h3 class="heading-tertiary u-margin-bottom-small u-align-center">
+              A BURGER FOR EVERY PALETTE
+            </h3>
+            <p class="paragraph">
+              Our menu is a celebration of flavors and variety. From classic
+              cheeseburgers to unique creations, there's a burger for every
+              palate. We use the finest ingredients, from succulent beef patties
+              to fresh veggies and homemade sauces. But that's not all; our menu
+              also features sides, salads, and desserts to complement your meal.
+              Dive into our menu, and let your taste buds explore the
+              possibilities.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="menu-cards u-display-flex-evenly">
+        <a href="#modal-burgers" class="menu-box menu-box--1">
+          <div class="menu-box__overlay"></div>
+          <h3 class="menu-box__title">Burgers</h3>
+        </a>
 
-		<header class="header" id="home">
-			<div class="header__slider--1"></div>
-			<div class="header__slider--2"></div>
-			<div class="header__slider--3"></div>
-			<div class="header__slider--4"></div>
-			<div class="header__logo-box">
-				<img src="img/logo-burger.png" alt="CityBite Burgers Logo" class="header__logo">
-			</div>
-			<div class="header__text-box">
-				<h1 class="heading-primary">
-					<span class="heading-primary--main">Where Flavor Meets</span>
-					<span class="heading-primary--sub">the Urban Pulse!</span>
-				</h1>
-			</div>
-			<div class="header__btn-box">
-				<a href="#contact" class="btn btn--black">Order</a>
-				<a href="#menu" class="btn btn--white">Menu</a>
-			</div>
-		</header>
-		<div class="about-section" id="about">
-			<h2 class="heading-secondary welcome">
-				<div class="u-align-center u-margin-bottom-big">
-					Welcome to CityBite Burgers!
-				</div>
-			</h2>
-			<div class="row about-container">
-				<div class="about-box">	
-					<img class="about-box__img about-box__img--1" alt="Image 1" src="img/1.png">
-					<h3 class="heading-tertiary u-margin-bottom-small">
-						Discover
-					</h3>
-					<p class="paragraph">
-						CityBite Burgers is your laid-back and friendly spot right in the heart of the city, 
-						where you can savor the most mouthwatering burgers around. Our passion for serving delicious, 
-						high-quality burgers is what sets us apart. Whether you're a fan of classic cheeseburgers, 
-						prefer a spicy twist, or opt for a vegetarian delight, we have something to satisfy every craving. 
-						We're not just a restaurant; we're a place where food enthusiasts gather to enjoy the perfect burger experience.
-					</p>
-				</div>
-				<div class="about-box">
-					<img class="about-box__img about-box__img--2" alt="Image 2" src="img/2.png">	
-					<h3 class="heading-tertiary u-margin-bottom-small">
-						Quality
-					</h3>
-					<p class="paragraph second-p">
-						At CityBiteBurgers, we take pride in using only the finest ingredients. Our beef is carefully selected for 
-						its flavor and juiciness. Our produce is always fresh and locally sourced whenever possible. 
-						We believe that a great burger starts with great ingredients, and we're committed to delivering a dining 
-						experience that exceeds your expectations. Quality is not just a promise; it's a guarantee.
-					</p>				
-				</div>
-				<div class="about-box">
-					<img class="about-box__img about-box__img--3" alt="Image 3" src="img/3.png">
-					<h3 class="heading-tertiary u-margin-bottom-small">
-						Destination 
-					</h3>
-					<p class="paragraph">
-						When you step into CityBiteBurgers, you're not just visiting a restaurant; you're entering a burger lover's 
-						paradise. Our cozy and inviting atmosphere is the perfect backdrop for a meal with friends, family, or a quick 
-						solo lunch. With friendly staff and a diverse menu, we're confident that your visit will be the first of many. 
-						Join us at CityBiteBurgers and indulge in the flavors that make us the talk of the town.
-					</p>
-					
-				</div>
-				
-			</div>						
-			<div class="about-btn">
-				<a href="#" class="btn-rectangular">Learn More &rarr;
-				</a>
-			</div>
-		</div>
-		<div class="menu-section" id="menu" onclick="if(document.querySelector('.modal:target') || document.querySelector('.fullscreen-modal:target')) location.href='#menu'">
-			<div class="u-align-center u-margin-bottom-big">
-				<h2 class="heading-secondary white">
-					MENU					
-				</h2>
-			</div>
-			<div class="u-display-flex menu-container">
-				<div class="our-menu ">
-					<div class="u-align-center u-margin-sides ">
-						<h3 class="heading-tertiary u-margin-bottom-small u-align-center">
-							A BURGER FOR EVERY PALETTE
-						</h3>
-						<p class="paragraph">
-							Our menu is a celebration of flavors and variety. From classic cheeseburgers to unique creations, there's a 
-							burger for every palate. We use the finest ingredients, from succulent beef patties to fresh veggies and 
-							homemade sauces. But that's not all; our menu also features sides, salads, and desserts to complement your meal. 
-							Dive into our menu, and let your taste buds explore the possibilities.
-						</p>
-					</div>
-				</div>
-			</div>			
-			<div class="menu-cards u-display-flex-evenly">	
+        <div id="modal-burgers" class="modal">
+          <div class="background" onclick="event.stopPropagation();">
+            <a href="#menu" class="modal__close">&times;</a>
+            <div class="background__inner">
+              <div class="modal__content">
+                <img class="menu-logo" src="./img/menu-logo.png" />
+                <h2>Burgers</h2>
+                <ul>
+                  <li>
+                    <div class="menu-item-box">
+                      <div class="menu-desc">
+                        <p>
+                          <span class="bold-menu">Classic Cheeseburger</span>
+                        </p>
+                        <p>
+                          Our signature beef patty, cheddar cheese, lettuce,
+                          tomato, onion, and our special sauce. Served on a
+                          toasted brioche bun.
+                        </p>
+                      </div>
+                      <a href="#modal-1">
+                        <img class="menu-img" alt="" src="img/burger-1.png" />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="menu-item-box">
+                      <div class="menu-desc">
+                        <p><span class="bold-menu">BBQ Bacon Burger</span></p>
+                        <p>
+                          Beef patty, crispy bacon, cheddar cheese, lettuce,
+                          onion rings, and smoky BBQ sauce. Served on a fresh
+                          pretzel bun.
+                        </p>
+                      </div>
+                      <a href="#modal-2">
+                        <img class="menu-img" alt="" src="img/burger-2.png" />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="menu-item-box">
+                      <div class="menu-desc">
+                        <p>
+                          <span class="bold-menu"
+                            >Veggie Delight (Vegetarian)</span
+                          >
+                        </p>
+                        <p>
+                          A flavorful veggie patty with lettuce, tomato,
+                          avocado, red onion, and a zesty aioli sauce. Served on
+                          a whole wheat bun.
+                        </p>
+                      </div>
+                      <a href="#modal-3">
+                        <img class="menu-img" alt="" src="img/burger-3.png" />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="menu-item-box">
+                      <div class="menu-desc">
+                        <p>
+                          <span class="bold-menu">Spicy Jalapeño Burger</span>
+                        </p>
+                        <p>
+                          Beef patty, pepper jack cheese, jalapeños, lettuce,
+                          and sriracha mayo. Served on a jalapeño-cheddar bun.
+                        </p>
+                      </div>
+                      <a href="#modal-4">
+                        <img class="menu-img" alt="" src="img/burger-4.png" />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="menu-item-box">
+                      <div class="menu-desc">
+                        <p>
+                          <span class="bold-menu">Truffle Mushroom Burger</span>
+                        </p>
+                        <p>
+                          Juicy beef patty, sautéed mushrooms, Swiss cheese,
+                          arugula, caramelized onions, and a creamy truffle
+                          aioli. Served on a toasted ciabatta bun.
+                        </p>
+                      </div>
+                      <a href="#modal-5a">
+                        <img class="menu-img" alt="" src="img/burger-5.png" />
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="modal-1" class="fullscreen-modal">
+          <a href="#modal-burgers" class="close-modal">&times;</a>
+          <img
+            class="fullscreen-content"
+            src="img/burger-1.png"
+            alt="Full image 1"
+          />
+        </div>
+        <div id="modal-2" class="fullscreen-modal">
+          <a href="#modal-burgers" class="close-modal">&times;</a>
+          <img
+            class="fullscreen-content"
+            src="img/burger-2.png"
+            alt="Full image 2"
+          />
+        </div>
+        <div id="modal-3" class="fullscreen-modal">
+          <a href="#modal-burgers" class="close-modal">&times;</a>
+          <img
+            class="fullscreen-content"
+            src="img/burger-3.png"
+            alt="Full image 3"
+          />
+        </div>
+        <div id="modal-4" class="fullscreen-modal">
+          <a href="#modal-burgers" class="close-modal">&times;</a>
+          <img
+            class="fullscreen-content"
+            src="img/burger-4.png"
+            alt="Full image 4"
+          />
+        </div>
+        <div id="modal-5a" class="fullscreen-modal">
+          <a href="#modal-burgers" class="close-modal">&times;</a>
+          <img
+            class="fullscreen-content"
+            src="img/burger-5.png"
+            alt="Full image 5a"
+          />
+        </div>
 
-					<a href="#modal-burgers" class="menu-box menu-box--1">
-					<div class="menu-box__overlay"></div>
-					<h3 class="menu-box__title">Burgers</h3>
-					</a>
+        <a href="#modal-sides" class="menu-box menu-box--2">
+          <div class="menu-box__overlay"></div>
+          <h3 class="menu-box__title">Sides</h3>
+        </a>
+        <div id="modal-sides" class="modal">
+          <div class="background" onclick="event.stopPropagation();">
+            <a href="#menu" class="modal__close">&times;</a>
+            <div class="background__inner">
+              <div class="modal__content">
+                <img class="menu-logo" src="./img/menu-logo.png" />
+                <h2>Sides</h2>
+                <ul>
+                  <li>
+                    <div class="menu-item-box">
+                      <div class="menu-desc">
+                        <p><span class="bold-menu">French Fries</span></p>
+                        <p>
+                          Crispy golden fries served with ketchup or your choice
+                          of dipping sauce.
+                        </p>
+                      </div>
+                      <a href="#modal-5">
+                        <img class="menu-img" alt="" src="img/sides-1.png" />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="menu-item-box">
+                      <div class="menu-desc">
+                        <p><span class="bold-menu">Sweet Potato Fries</span></p>
+                        <p>
+                          Sweet and savory, a delightful twist on traditional
+                          fries.
+                        </p>
+                      </div>
+                      <a href="#modal-6">
+                        <img class="menu-img" alt="" src="img/sides-2.png" />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="menu-item-box">
+                      <div class="menu-desc">
+                        <p><span class="bold-menu">Onion Rings</span></p>
+                        <p>
+                          Thick-cut onion rings with a crunchy, seasoned
+                          coating.
+                        </p>
+                      </div>
+                      <a href="#modal-7">
+                        <img class="menu-img" alt="" src="img/sides-3.png" />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="menu-item-box">
+                      <div class="menu-desc">
+                        <p><span class="bold-menu">Mozzarella Sticks</span></p>
+                        <p>
+                          Sweet and savory, a delightful twist on traditional
+                          fries.
+                        </p>
+                      </div>
+                      <a href="#modal-8">
+                        <img class="menu-img" alt="" src="img/sides-4.png" />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="menu-item-box">
+                      <div class="menu-desc">
+                        <p><span class="bold-menu">Loaded Nachos</span></p>
+                        <p>
+                          Crispy tortilla chips topped with melted cheese,
+                          jalapeños, sour cream, and guacamole.
+                        </p>
+                      </div>
+                      <a href="#modal-9">
+                        <img class="menu-img" alt="" src="img/sides-5.png" />
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="modal-5" class="fullscreen-modal">
+          <a href="#modal-sides" class="close-modal">&times;</a>
+          <img
+            class="fullscreen-content"
+            src="img/sides-1.png"
+            alt="Full image 5"
+          />
+        </div>
+        <div id="modal-6" class="fullscreen-modal">
+          <a href="#modal-sides" class="close-modal">&times;</a>
+          <img
+            class="fullscreen-content"
+            src="img/sides-2.png"
+            alt="Full image 6"
+          />
+        </div>
+        <div id="modal-7" class="fullscreen-modal">
+          <a href="#modal-sides" class="close-modal">&times;</a>
+          <img
+            class="fullscreen-content"
+            src="img/sides-3.png"
+            alt="Full image 7"
+          />
+        </div>
+        <div id="modal-8" class="fullscreen-modal">
+          <a href="#modal-sides" class="close-modal">&times;</a>
+          <img
+            class="fullscreen-content"
+            src="img/sides-4.png"
+            alt="Full image 8"
+          />
+        </div>
+        <div id="modal-9" class="fullscreen-modal">
+          <a href="#modal-sides" class="close-modal">&times;</a>
+          <img
+            class="fullscreen-content"
+            src="img/sides-5.png"
+            alt="Full image 9"
+          />
+        </div>
 
-					<div id="modal-burgers" class="modal" >
-						<div class="background" onclick="event.stopPropagation();">
-							<a href="#menu" class="modal__close">&times;</a>
-							<div class="background__inner" >
-								<div class="modal__content">					
-									<img class="menu-logo" src="./img/menu-logo.png"/>
-								<h2>Burgers</h2>
-								<ul>
-									<li>
-									<div class="menu-item-box">
-										<div class="menu-desc">
-											<p><span class="bold-menu">Classic Cheeseburger</span>	
-											</p>									
-											<p>Our signature beef patty, cheddar cheese, lettuce, tomato, onion, and our special sauce. Served on a toasted brioche bun.
-											</p>
-										</div>
-											<a href="#modal-1" >
-												<img class="menu-img" alt="" src="img/burger-1.png" />
-											</a>										 
-									</div>		
-									</li>					
-									<li>	
-									<div class="menu-item-box">
-										<div class="menu-desc">
-											<p><span class="bold-menu">BBQ Bacon Burger</span>
-											</p>
-											<p>Beef patty, crispy bacon, cheddar cheese, lettuce, onion rings, and smoky BBQ sauce. Served on a fresh pretzel bun.
-											</p>
-											</div>
-											<a href="#modal-2">
-												<img class="menu-img" alt="" src="img/burger-2.png" />
-											</a>
-									</div>
-									</li>
-									<li>
-									<div class="menu-item-box">
-										<div class="menu-desc">
-											<p><span class="bold-menu">Veggie Delight (Vegetarian)</span>
-											</p>
-											<p>A flavorful veggie patty with lettuce, tomato, avocado, red onion, and a zesty aioli sauce. Served on a whole wheat bun.
-											</p>
-										</div>
-										<a href="#modal-3">
-											<img class="menu-img" alt="" src="img/burger-3.png" />
-										</a>
-									</div>
-									</li>
-									<li>
-									<div class="menu-item-box">
-										<div class="menu-desc">
-										<p><span class="bold-menu">Spicy Jalapeño Burger</span>
-										</p>
-										<p>Beef patty, pepper jack cheese, jalapeños, lettuce, and sriracha mayo. Served on a jalapeño-cheddar bun.
-										</p>
-										</div>
-										<a href="#modal-4">
-											<img class="menu-img" alt="" src="img/burger-4.png" />
-										</a>	
-									</div>
-									</li>
-									<li>
-										<div class="menu-item-box">
-											<div class="menu-desc">
-											<p><span class="bold-menu">Truffle Mushroom Burger</span>
-											</p>
-											<p>Juicy beef patty, sautéed mushrooms, Swiss cheese, arugula, caramelized onions, and a creamy truffle aioli. Served on a toasted ciabatta bun.
-											</p>
-											</div>
-											<a href="#modal-5a">
-												<img class="menu-img" alt="" src="img/burger-5.png" />
-											</a>	
-										</div>
-									</li>
-								</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id="modal-1" class="fullscreen-modal">
-						<a href="#modal-burgers" class="close-modal">&times;</a>
-						<img class="fullscreen-content" src="img/burger-1.png" alt="Full image 1" />
-					</div>
-					<div id="modal-2" class="fullscreen-modal">
-						<a href="#modal-burgers" class="close-modal">&times;</a>
-						<img class="fullscreen-content" src="img/burger-2.png" alt="Full image 2" />
-					</div>
-					<div id="modal-3" class="fullscreen-modal">
-						<a href="#modal-burgers" class="close-modal">&times;</a>
-						<img class="fullscreen-content" src="img/burger-3.png" alt="Full image 3" />
-					</div>
-					<div id="modal-4" class="fullscreen-modal">
-						<a href="#modal-burgers" class="close-modal">&times;</a>
-						<img class="fullscreen-content" src="img/burger-4.png" alt="Full image 4" />
-					</div>
-					<div id="modal-5a" class="fullscreen-modal">
-						<a href="#modal-burgers" class="close-modal">&times;</a>
-						<img class="fullscreen-content" src="img/burger-5.png" alt="Full image 5a" />
-					</div>
-		
-				<a href="#modal-sides" class="menu-box menu-box--2">
-					<div class="menu-box__overlay"></div>
-					<h3 class="menu-box__title">Sides</h3>
-				</a>
-				<div id="modal-sides" class="modal">
-					<div class="background" onclick="event.stopPropagation();">
-						<a href="#menu" class="modal__close">&times;</a>
-						<div class="background__inner">
-							<div class="modal__content">
-							<img class="menu-logo" src="./img/menu-logo.png"/>
-							<h2>Sides</h2>
-							<ul>
-								<li>
-								<div class="menu-item-box">
-									<div class="menu-desc">
-										<p><span class="bold-menu">French Fries</span>	
-										</p>										
-										<p>Crispy golden fries served with ketchup or your choice of dipping sauce.
-										</p>
-									</div>
-									<a href="#modal-5" >
-										<img class="menu-img" alt="" src="img/sides-1.png" />
-									</a>
-								</div>		
-								</li>						
-								<li>
-								<div class="menu-item-box">
-									<div class="menu-desc">
-										<p><span class="bold-menu">Sweet Potato Fries</span>
-										</p>
-										<p>Sweet and savory, a delightful twist on traditional fries.
-										</p>
-										</div>
-										<a href="#modal-6" >
-											<img class="menu-img" alt="" src="img/sides-2.png" />
-										</a>
-								</div>
-								</li>
-								<li>
-								<div class="menu-item-box">
-									<div class="menu-desc">
-										<p><span class="bold-menu">Onion Rings</span>
-										</p>
-										<p>Thick-cut onion rings with a crunchy, seasoned coating.
-										</p>
-									</div>
-									<a href="#modal-7" >
-										<img class="menu-img" alt="" src="img/sides-3.png" />
-									</a>	
-								</div>
-								</li>
-								<li>
-								<div class="menu-item-box">
-									<div class="menu-desc">
-									<p><span class="bold-menu">Mozzarella Sticks</span>
-									</p>
-									<p>Sweet and savory, a delightful twist on traditional fries.
-									</p>
-									</div>
-									<a href="#modal-8" >
-										<img class="menu-img" alt="" src="img/sides-4.png" />
-									</a>
-								</div>
-								</li>
-								<li>
-								<div class="menu-item-box">
-									<div class="menu-desc">
-									<p><span class="bold-menu">Loaded Nachos</span>
-									</p>
-									<p>Crispy tortilla chips topped with melted cheese, jalapeños, sour cream, and guacamole.
-									</p>
-									</div>
-									<a href="#modal-9" >
-										<img class="menu-img" alt="" src="img/sides-5.png" />
-									</a>
-								</div>
-								</li>
-							</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div id="modal-5" class="fullscreen-modal">
-					<a href="#modal-sides" class="close-modal">&times;</a>
-					<img class="fullscreen-content" src="img/sides-1.png" alt="Full image 5" />
-				</div>
-				<div id="modal-6" class="fullscreen-modal">
-					<a href="#modal-sides" class="close-modal">&times;</a>
-					<img class="fullscreen-content" src="img/sides-2.png" alt="Full image 6" />
-				</div>
-				<div id="modal-7" class="fullscreen-modal">
-					<a href="#modal-sides" class="close-modal">&times;</a>
-					<img class="fullscreen-content" src="img/sides-3.png" alt="Full image 7" />
-				</div>
-				<div id="modal-8" class="fullscreen-modal">
-					<a href="#modal-sides" class="close-modal">&times;</a>
-					<img class="fullscreen-content" src="img/sides-4.png" alt="Full image 8" />
-				</div>
-				<div id="modal-9" class="fullscreen-modal">
-					<a href="#modal-sides" class="close-modal">&times;</a>
-					<img class="fullscreen-content" src="img/sides-5.png" alt="Full image 9" />
-				</div>
+        <a href="#modal-desserts" class="menu-box menu-box--3">
+          <div class="menu-box__overlay"></div>
+          <h3 class="menu-box__title">Desserts</h3>
+        </a>
 
-				<a href="#modal-desserts" class="menu-box menu-box--3">
-					<div class="menu-box__overlay"></div>
-					<h3 class="menu-box__title">Desserts</h3>
-					</a>
+        <div id="modal-desserts" class="modal">
+          <div class="background" onclick="event.stopPropagation();">
+            <a href="#menu" class="modal__close">&times;</a>
+            <div class="background__inner">
+              <div class="modal__content">
+                <img class="menu-logo" src="./img/menu-logo.png" />
+                <h2>Desserts</h2>
+                <ul>
+                  <li>
+                    <div class="menu-item-box">
+                      <div class="menu-desc">
+                        <p>
+                          <span class="bold-menu"
+                            >Chocolate Brownie Sundae</span
+                          >
+                        </p>
+                        <p>
+                          Warm chocolate brownie topped with vanilla ice cream,
+                          chocolate sauce, and whipped cream.
+                        </p>
+                      </div>
+                      <a href="#modal-10">
+                        <img class="menu-img" alt="" src="img/desserts-1.png" />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="menu-item-box">
+                      <div class="menu-desc">
+                        <p>
+                          <span class="bold-menu">New York Cheesecake</span>
+                        </p>
+                        <p>
+                          Creamy cheesecake served with a raspberry coulis and
+                          fresh berries.
+                        </p>
+                      </div>
+                      <a href="#modal-11">
+                        <img class="menu-img" alt="" src="img/desserts-2.png" />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="menu-item-box">
+                      <div class="menu-desc">
+                        <p><span class="bold-menu">Molten Lava Cake</span></p>
+                        <p>
+                          A rich and gooey chocolate cake with a molten center,
+                          served with a scoop of ice cream.
+                        </p>
+                      </div>
+                      <a href="#modal-12">
+                        <img class="menu-img" alt="" src="img/desserts-3.png" />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="menu-item-box">
+                      <div class="menu-desc">
+                        <p><span class="bold-menu">Fruit Parfait</span></p>
+                        <p>
+                          Layers of yogurt, granola, and fresh seasonal fruits.
+                        </p>
+                      </div>
+                      <a href="#modal-13">
+                        <img class="menu-img" alt="" src="img/desserts-4.png" />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="menu-item-box">
+                      <div class="menu-desc">
+                        <p><span class="bold-menu">Churros</span></p>
+                        <p>
+                          Fried dough pastries coated in cinnamon sugar, served
+                          with chocolate dipping sauce.
+                        </p>
+                      </div>
+                      <a href="#modal-14">
+                        <img class="menu-img" alt="" src="img/desserts-5.png" />
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="modal-10" class="fullscreen-modal">
+          <a href="#modal-desserts" class="close-modal">&times;</a>
+          <img
+            class="fullscreen-content"
+            src="img/desserts-1.png"
+            alt="Full image 5"
+          />
+        </div>
+        <div id="modal-11" class="fullscreen-modal">
+          <a href="#modal-desserts" class="close-modal">&times;</a>
+          <img
+            class="fullscreen-content"
+            src="img/desserts-2.png"
+            alt="Full image 6"
+          />
+        </div>
+        <div id="modal-12" class="fullscreen-modal">
+          <a href="#modal-desserts" class="close-modal">&times;</a>
+          <img
+            class="fullscreen-content"
+            src="img/desserts-3.png"
+            alt="Full image 7"
+          />
+        </div>
+        <div id="modal-13" class="fullscreen-modal">
+          <a href="#modal-desserts" class="close-modal">&times;</a>
+          <img
+            class="fullscreen-content"
+            src="img/desserts-4.png"
+            alt="Full image 8"
+          />
+        </div>
+        <div id="modal-14" class="fullscreen-modal">
+          <a href="#modal-desserts" class="close-modal">&times;</a>
+          <img
+            class="fullscreen-content"
+            src="img/desserts-5.png"
+            alt="Full image 9"
+          />
+        </div>
 
-					<div id="modal-desserts" class="modal">
-						<div class="background" onclick="event.stopPropagation();">
-							<a href="#menu" class="modal__close">&times;</a>
-							<div class="background__inner">
-								<div class="modal__content">
-								<img class="menu-logo" src="./img/menu-logo.png"/>
-								<h2>Desserts</h2>
-								<ul>
-									<li>
-									<div class="menu-item-box">
-										<div class="menu-desc">
-											<p><span class="bold-menu">Chocolate Brownie Sundae</span>	
-											</p>									
-											<p>Warm chocolate brownie topped with vanilla ice cream, chocolate sauce, and whipped cream.
-											</p>
-										</div>
-										<a href="#modal-10" >
-											<img class="menu-img" alt="" src="img/desserts-1.png" />
-										</a>
-									</div>		
-									</li>					
-									<li>	
-									<div class="menu-item-box">
-										<div class="menu-desc">
-											<p><span class="bold-menu">New York Cheesecake</span>
-											</p>
-											<p>Creamy cheesecake served with a raspberry coulis and fresh berries.
-											</p>
-											</div>
-											<a href="#modal-11" >
-												<img class="menu-img" alt="" src="img/desserts-2.png" />
-											</a>
-									</div>
-									</li>
-									<li>
-									<div class="menu-item-box">
-										<div class="menu-desc">
-											<p><span class="bold-menu">Molten Lava Cake</span>
-											</p>
-											<p>A rich and gooey chocolate cake with a molten center, served with a scoop of ice cream.
-											</p>
-										</div>
-										<a href="#modal-12" >
-											<img class="menu-img" alt="" src="img/desserts-3.png" />
-										</a>
-									</div>
-									</li>
-									<li>
-									<div class="menu-item-box">
-										<div class="menu-desc">
-										<p><span class="bold-menu">Fruit Parfait</span>
-										</p>
-										<p>Layers of yogurt, granola, and fresh seasonal fruits.
-										</p>
-										</div>
-										<a href="#modal-13" >
-											<img class="menu-img" alt="" src="img/desserts-4.png" />
-										</a>
-									</div>
-									</li>
-									<li>
-										<div class="menu-item-box">
-											<div class="menu-desc">
-											<p><span class="bold-menu">Churros</span>
-											</p>
-											<p>Fried dough pastries coated in cinnamon sugar, served with chocolate dipping sauce.
-											</p>
-											</div>
-											<a href="#modal-14">
-												<img class="menu-img" alt="" src="img/desserts-5.png" />
-											</a>
-										</div>
-										</li>
-								</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id="modal-10" class="fullscreen-modal">
-						<a href="#modal-desserts" class="close-modal">&times;</a>
-						<img class="fullscreen-content" src="img/desserts-1.png" alt="Full image 5" />
-					</div>
-					<div id="modal-11" class="fullscreen-modal">
-						<a href="#modal-desserts" class="close-modal">&times;</a>
-						<img class="fullscreen-content" src="img/desserts-2.png" alt="Full image 6" />
-					</div>
-					<div id="modal-12" class="fullscreen-modal">
-						<a href="#modal-desserts" class="close-modal">&times;</a>
-						<img class="fullscreen-content" src="img/desserts-3.png" alt="Full image 7" />
-					</div>
-					<div id="modal-13" class="fullscreen-modal">
-						<a href="#modal-desserts" class="close-modal">&times;</a>
-						<img class="fullscreen-content" src="img/desserts-4.png" alt="Full image 8" />
-					</div>
-					<div id="modal-14" class="fullscreen-modal">
-						<a href="#modal-desserts" class="close-modal">&times;</a>
-						<img class="fullscreen-content" src="img/desserts-5.png" alt="Full image 9" />
-					</div>
-			
-					<a href="#modal-beverages" class="menu-box menu-box--4">
-						<div class="menu-box__overlay"></div>
-						<h3 class="menu-box__title">Beverages</h3>
-					</a>
-					<div id="modal-beverages" class="modal">
-						<div class="background" onclick="event.stopPropagation();">
-							<a href="#menu" class="modal__close">&times;</a>
-							<div class="background__inner">
-								<div class="modal__content">
-								<img class="menu-logo" src="./img/menu-logo.png"/>
-								<h2>Beverages</h2>
-								<ul>
-									<li>
-									<div class="menu-item-box">
-										<div class="menu-desc">
-											<p><span class="bold-menu">Soda</span>	
-											</p>									
-											<p>Choose from a variety of soft drinks, including cola, lemon-lime, orange and more. Soda is served with ice-cubes.
-											</p>
-										</div>
-										<a href="#modal-15">
-											<img class="menu-img" alt="" src="img/drinks-1.png" />
-										</a>
-									</div>		
-									</li>						
-									<li>
-									<div class="menu-item-box">
-										<div class="menu-desc">
-											<p><span class="bold-menu">Iced Tea</span>
-											</p>
-											<p>Classic iced tea available sweetened or unsweetened.
-											</p>
-											</div>
-											<a href="#modal-16">
-												<img class="menu-img" alt="" src="img/drinks-2.png" />
-											</a>
-									</div>
-									</li>
-									<li>
-									<div class="menu-item-box">
-										<div class="menu-desc">
-											<p><span class="bold-menu">Milkshakes</span>
-											</p>
-											<p>Creamy milkshakes in flavors like vanilla, chocolate, and strawberry.
-											</p>
-										</div>
-										<a href="#modal-17" >
-											<img class="menu-img" alt="" src="img/drinks-3.png" />
-										</a>
-									</div>
-									</li>
-									<li>
-									<div class="menu-item-box">
-										<div class="menu-desc">
-										<p><span class="bold-menu">Fruit Smoothies</span>
-										</p>
-										<p>Refreshing smoothies made with your choice of fruits and yogurt.
-										</p>
-										</div>
-										<a href="#modal-18" >
-											<img class="menu-img" alt="" src="img/drinks-4.png" />
-										</a>
-									</div>
-									</li>
-									<li>
-									<div class="menu-item-box">
-										<div class="menu-desc">
-										<p><span class="bold-menu">Coffee</span>
-										</p>
-										<p>Freshly brewed coffee with the option of cream and sugar.
-										</p>
-										</div>
-										<a href="#modal-19" >
-											<img class="menu-img" alt="" src="img/drinks-5.png" />
-										</a>
-									</div>
-									</li>
-								</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id="modal-15" class="fullscreen-modal">
-						<a href="#modal-beverages" class="close-modal">&times;</a>
-						<img class="fullscreen-content" src="img/drinks-1.png" alt="Full image 5" />
-					</div>
-					<div id="modal-16" class="fullscreen-modal">
-						<a href="#modal-beverages" class="close-modal">&times;</a>
-						<img class="fullscreen-content" src="img/drinks-2.png" alt="Full image 6" />
-					</div>
-					<div id="modal-17" class="fullscreen-modal">
-						<a href="#modal-beverages" class="close-modal">&times;</a>
-						<img class="fullscreen-content" src="img/drinks-3.png" alt="Full image 7" />
-					</div>
-					<div id="modal-18" class="fullscreen-modal">
-						<a href="#modal-beverages" class="close-modal">&times;</a>
-						<img class="fullscreen-content" src="img/drinks-4.png" alt="Full image 8" />
-					</div>
-					<div id="modal-19" class="fullscreen-modal">
-						<a href="#modal-beverages" class="close-modal">&times;</a>
-						<img class="fullscreen-content" src="img/drinks-5.png" alt="Full image 9" />
-					</div>
-				</div>
-		</div>							
-		<div class="story-section" id="our-story">
-			<h2 class="heading-secondary white">
-				<div class="u-align-center u-margin-bottom-big">
-					OUR STORY 
-				</div>
-			</h2>
-			<div class="story-bg">
-					<img class="our-story-bg" src="img/our-story.jpg">
-				<div class="story-bg__overlay"></div>
-			</div>
-			<div class="u-display-flex">
-			<div class="row story-row">
-				<div class="story story--1">
-					<figure class="story__shape">
-						<img src="img/story-1.jpg" class="story__image first" alt="Male Golfer">
-						<figcaption class="story__caption">OUR STORY</figcaption>
-					</figure>
-					<div class="story__text">
-						<h3 class="heading-tertiary u-margin-bottom-small">Our Journey </h3>
-						<p class="story__para">
-							At CityBite Burgers, we're not just passionate about burgers - we're passionate about the entire dining 
-							experience. Our story begins with a simple vision - to create a place where people can enjoy great food, 
-							connect with friends and family, and feel at home. We take pride in serving our community and sharing the 
-							joy of a delicious burger. Join us on our journey and discover the heart behind CityBite Burgers.
-						</p>
-					</div>
-				</div>
-				<div class="story story--2">
-					<figure class="story__shape">
-						<img src="img/story-2.jpg" class="story__image" alt="Male Golfer">
-						<figcaption class="story__caption">VISIT US</figcaption>
-					</figure>
-					<div class="story__text">
-						<h3 class="heading-tertiary u-margin-bottom-small">Find Us in the<br>Heart of the City</h3>
-						<p class="story__para">
-							CityBite Burgers is conveniently located in the heart of the city. Our welcoming restaurant offers a 
-							comfortable and vibrant atmosphere, perfect for gatherings with friends, family, or colleagues. 
-							Whether you're dining in or taking your meal to go, we're ready to serve you. Join us and experience 
-							the warm ambiance of CityBite Burgers.
-						</p>
-					</div>
-				</div>
-			</div>
-			</div>
-		</div>
-		<div class="where-section" id="visit-us">
-			<h2 class="heading-secondary white">
-				<div class="u-align-center u-margin-bottom-big">
-					WHERE TO FIND US 
-				</div>
-			</h2>
-			<div class="row location-row">
-				<div class="col-1-of-4">
-					<div class="location">
-						<div class="location__side location__side--front">
-							<div class="location__image location__image--1"></div>
-							<h4 class="location__heading location__heading--1">Times Square Delight</h4>
-						</div>
-						<div class="location__side location__side--back location__side--back-1"> 
-							<div class="location__button">
-								<div class="location__content">					
-									<h3 class="heading-tertiary u-margin-bottom-small">Explore Times Square</h3>
-									<p class="location-box__text">
-										Our Times Square location is right in the heart of the city's entertainment hub. 
-										Indulge in our mouthwatering burgers amidst the bright lights and bustling energy of Times Square.
-									</p>
-									<a href="#contact" class="btn btn--white">Book Now</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-1-of-4">
-					<div class="location">
-						<div class="location__side location__side--front">
-							<div class="location__image location__image--2"></div>
-							<h4 class="location__heading location__heading--2">Central Park Oasis</h4>
-						</div>
-						<div class="location__side location__side--back location__side--back-2"> 
-							<div class="location__button">
-								<div class="location__content">	
-									<h3 class="heading-tertiary u-margin-bottom-small">Discover Central Park</h3>
-									<p class="location-box__text">
-										Visit our Central Park spot for a taste of nature and delicious flavors. 
-										Enjoy our delectable burgers while surrounded by the green serenity of Central Park
-									</p>
-									<a href="#contact" class="btn btn--white">Book Now</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-1-of-4">
-					<div class="location">
-						<div class="location__side location__side--front">
-							<div class="location__image location__image--3"></div>
-							<h4 class="location__heading location__heading--3">Empire State Bites</h4>
-						</div>
-						<div class="location__side location__side--back location__side--back-3"> 
-							<div class="location__button">
-								<div class="location__content">	
-									<h3 class="heading-tertiary u-margin-bottom-small">Experience Empire State</h3>
-									<p class="location-box__text">
-										Savor our signature burgers at the Empire State Bites location. 
-										Relish the iconic taste while taking in breathtaking views of the Empire State Building and the city skyline.
-									</p>
-									<a href="#contact" class="btn btn--white">Book Now</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-1-of-4">
-					<div class="location">
-						<div class="location__side location__side--front">
-							<div class="location__image location__image--4"></div>
-							<h4 class="location__heading location__heading--4">Brooklyn Flavors</h4>
-						</div>
-						<div class="location__side location__side--back location__side--back-4"> 
-							<div class="location__button">
-								<div class="location__content">	
-									<h3 class="heading-tertiary u-margin-bottom-small">Taste Brooklyn</h3>
-									<p class="location-box__text">
-										Our Brooklyn location is a culinary adventure waiting to be explored. 
-										Relish our mouthwatering burgers while immersing yourself in the artistic and cultural atmosphere of Brooklyn.
-									</p>
-									<a href="#contact" class="btn btn--white">Book Now</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<section class="contact-section" id="contact">
-			<h2 class="heading-secondary contact-us">
-				<div class="u-align-center u-margin-bottom-big">
-					Contact Us
-				</div>
-			</h2>
-			<div class="u-display-flex contact-container">
-			<div class="contact-row">
-				<div class="contact ">
-					<div class="contact__form">
-						<form class="form" target="#">
-							<div class="form__group">
-								<input type="text" class="form__input" id="name" placeholder="Full Name" required>
-								<label for="name" class="form__label">Full Name</label>
-							</div>
-							<div class="form__group">
-								<input type="email" class="form__input" id="email" placeholder="Email Address" required>
-								<label for="email" class="form__label">Email Address</label>
-							</div>
-							<div class="form__radio-container">
-								<div class="form__radio-group">
-									<input type="radio" class="form__radio-input" id="Times" name ="location">									
-									<label for="Times" class="form__radio-label"><span class="form__radio-button"></span>Times Square Delight</label>
-								</div>
-								<div class="form__radio-group">
-									<input type="radio" class="form__radio-input" id="Central" name ="location">
-									<label for="Central" class="form__radio-label"><span class="form__radio-button"></span>Central Park Oasis</label>
-								</div>
-						
-								<div class="form__radio-group">
-									<input type="radio" class="form__radio-input" id="Empire" name ="location">
-									<label for="Empire" class="form__radio-label"><span class="form__radio-button"></span>Empire State Bites</label>
-								</div>
-								<div class="form__radio-group">
-									<input type="radio" class="form__radio-input" id="Brooklyn" name ="location">
-									<label for="Brooklyn" class="form__radio-label"><span class="form__radio-button"></span>Brooklyn Flavors</label>
-								</div>
-								
-							</div>
-							<div class="form__group">
-								<textarea class="form__textarea" name="message" placeholder="Your message"></textarea>
-							</div>
-							<div class="form__group">
-								<a href="#" class="btn-rectangular btn-rectangular--white">Send &rarr;</a>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-			</div>
-		</section>
-		<footer class="footer">
-				<div class="footer__logo-box">
-					<picture class="footer__logo">
-						<source srcset="vendors/favicon/android-chrome-192x192.png 2x, vendors/favicon/android-chrome-192x192.png 1x" media="(max-width: 480px)">
-						<img srcset="img/logo-burger.png 2x, img/logo-burger.png 1x" src="img/logo-burger.png" alt="CityBite Burgers Logo">
-					</picture>					
-				</div>
-			<div class="footer-width">
-				<div >
-					<div class="footer__navigation">
-						<ul class="footer__list">
-							<li class="footer__item"><a href="#" class="footer__link">Our Story</a></li>
-							<li class="footer__item"><a href="#" class="footer__link">Contact Us</a></li>
-							<li class="footer__item"><a href="#" class="footer__link">Careers</a></li>
-							<li class="footer__item"><a href="#" class="footer__link">Privacy</a></li>
-							<li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="footer__copyright">
-					<div class="footer__copyright-box">
-						<p></p>&copy; <script>document.write(new Date().getFullYear())</script> Filosoho Space. AllRights Reserved.</p>
-						<br>
-						<span class="footer-small">
-							Project from course by <p class="footer__author">Nahid Akhter </p> and <p class="footer__author"> Juan Galvan.</p>
-						</span>
-					</div>
-				</div>
-			</div>
-		</footer>
+        <a href="#modal-beverages" class="menu-box menu-box--4">
+          <div class="menu-box__overlay"></div>
+          <h3 class="menu-box__title">Beverages</h3>
+        </a>
+        <div id="modal-beverages" class="modal">
+          <div class="background" onclick="event.stopPropagation();">
+            <a href="#menu" class="modal__close">&times;</a>
+            <div class="background__inner">
+              <div class="modal__content">
+                <img class="menu-logo" src="./img/menu-logo.png" />
+                <h2>Beverages</h2>
+                <ul>
+                  <li>
+                    <div class="menu-item-box">
+                      <div class="menu-desc">
+                        <p><span class="bold-menu">Soda</span></p>
+                        <p>
+                          Choose from a variety of soft drinks, including cola,
+                          lemon-lime, orange and more. Soda is served with
+                          ice-cubes.
+                        </p>
+                      </div>
+                      <a href="#modal-15">
+                        <img class="menu-img" alt="" src="img/drinks-1.png" />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="menu-item-box">
+                      <div class="menu-desc">
+                        <p><span class="bold-menu">Iced Tea</span></p>
+                        <p>
+                          Classic iced tea available sweetened or unsweetened.
+                        </p>
+                      </div>
+                      <a href="#modal-16">
+                        <img class="menu-img" alt="" src="img/drinks-2.png" />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="menu-item-box">
+                      <div class="menu-desc">
+                        <p><span class="bold-menu">Milkshakes</span></p>
+                        <p>
+                          Creamy milkshakes in flavors like vanilla, chocolate,
+                          and strawberry.
+                        </p>
+                      </div>
+                      <a href="#modal-17">
+                        <img class="menu-img" alt="" src="img/drinks-3.png" />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="menu-item-box">
+                      <div class="menu-desc">
+                        <p><span class="bold-menu">Fruit Smoothies</span></p>
+                        <p>
+                          Refreshing smoothies made with your choice of fruits
+                          and yogurt.
+                        </p>
+                      </div>
+                      <a href="#modal-18">
+                        <img class="menu-img" alt="" src="img/drinks-4.png" />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="menu-item-box">
+                      <div class="menu-desc">
+                        <p><span class="bold-menu">Coffee</span></p>
+                        <p>
+                          Freshly brewed coffee with the option of cream and
+                          sugar.
+                        </p>
+                      </div>
+                      <a href="#modal-19">
+                        <img class="menu-img" alt="" src="img/drinks-5.png" />
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="modal-15" class="fullscreen-modal">
+          <a href="#modal-beverages" class="close-modal">&times;</a>
+          <img
+            class="fullscreen-content"
+            src="img/drinks-1.png"
+            alt="Full image 5"
+          />
+        </div>
+        <div id="modal-16" class="fullscreen-modal">
+          <a href="#modal-beverages" class="close-modal">&times;</a>
+          <img
+            class="fullscreen-content"
+            src="img/drinks-2.png"
+            alt="Full image 6"
+          />
+        </div>
+        <div id="modal-17" class="fullscreen-modal">
+          <a href="#modal-beverages" class="close-modal">&times;</a>
+          <img
+            class="fullscreen-content"
+            src="img/drinks-3.png"
+            alt="Full image 7"
+          />
+        </div>
+        <div id="modal-18" class="fullscreen-modal">
+          <a href="#modal-beverages" class="close-modal">&times;</a>
+          <img
+            class="fullscreen-content"
+            src="img/drinks-4.png"
+            alt="Full image 8"
+          />
+        </div>
+        <div id="modal-19" class="fullscreen-modal">
+          <a href="#modal-beverages" class="close-modal">&times;</a>
+          <img
+            class="fullscreen-content"
+            src="img/drinks-5.png"
+            alt="Full image 9"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="story-section" id="our-story">
+      <h2 class="heading-secondary white">
+        <div class="u-align-center u-margin-bottom-big">OUR STORY</div>
+      </h2>
+      <div class="story-bg">
+        <img class="our-story-bg" src="img/our-story.jpg" />
+        <div class="story-bg__overlay"></div>
+      </div>
+      <div class="u-display-flex">
+        <div class="row story-row">
+          <div class="story story--1">
+            <figure class="story__shape">
+              <img
+                src="img/story-1.jpg"
+                class="story__image first"
+                alt="Male Golfer"
+              />
+              <figcaption class="story__caption">OUR STORY</figcaption>
+            </figure>
+            <div class="story__text">
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Our Journey
+              </h3>
+              <p class="story__para">
+                At CityBite Burgers, we're not just passionate about burgers -
+                we're passionate about the entire dining experience. Our story
+                begins with a simple vision - to create a place where people can
+                enjoy great food, connect with friends and family, and feel at
+                home. We take pride in serving our community and sharing the joy
+                of a delicious burger. Join us on our journey and discover the
+                heart behind CityBite Burgers.
+              </p>
+            </div>
+          </div>
+          <div class="story story--2">
+            <figure class="story__shape">
+              <img
+                src="img/story-2.jpg"
+                class="story__image"
+                alt="Male Golfer"
+              />
+              <figcaption class="story__caption">VISIT US</figcaption>
+            </figure>
+            <div class="story__text">
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Find Us in the<br />Heart of the City
+              </h3>
+              <p class="story__para">
+                CityBite Burgers is conveniently located in the heart of the
+                city. Our welcoming restaurant offers a comfortable and vibrant
+                atmosphere, perfect for gatherings with friends, family, or
+                colleagues. Whether you're dining in or taking your meal to go,
+                we're ready to serve you. Join us and experience the warm
+                ambiance of CityBite Burgers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="where-section" id="visit-us">
+      <h2 class="heading-secondary white">
+        <div class="u-align-center u-margin-bottom-big">WHERE TO FIND US</div>
+      </h2>
+      <div class="row location-row">
+        <div class="col-1-of-4">
+          <div class="location">
+            <div class="location__side location__side--front">
+              <div class="location__image location__image--1"></div>
+              <h4 class="location__heading location__heading--1">
+                Times Square Delight
+              </h4>
+            </div>
+            <div
+              class="location__side location__side--back location__side--back-1"
+            >
+              <div class="location__button">
+                <div class="location__content">
+                  <h3 class="heading-tertiary u-margin-bottom-small">
+                    Explore Times Square
+                  </h3>
+                  <p class="location-box__text">
+                    Our Times Square location is right in the heart of the
+                    city's entertainment hub. Indulge in our mouthwatering
+                    burgers amidst the bright lights and bustling energy of
+                    Times Square.
+                  </p>
+                  <a href="#contact" class="btn btn--white">Book Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-1-of-4">
+          <div class="location">
+            <div class="location__side location__side--front">
+              <div class="location__image location__image--2"></div>
+              <h4 class="location__heading location__heading--2">
+                Central Park Oasis
+              </h4>
+            </div>
+            <div
+              class="location__side location__side--back location__side--back-2"
+            >
+              <div class="location__button">
+                <div class="location__content">
+                  <h3 class="heading-tertiary u-margin-bottom-small">
+                    Discover Central Park
+                  </h3>
+                  <p class="location-box__text">
+                    Visit our Central Park spot for a taste of nature and
+                    delicious flavors. Enjoy our delectable burgers while
+                    surrounded by the green serenity of Central Park
+                  </p>
+                  <a href="#contact" class="btn btn--white">Book Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-1-of-4">
+          <div class="location">
+            <div class="location__side location__side--front">
+              <div class="location__image location__image--3"></div>
+              <h4 class="location__heading location__heading--3">
+                Empire State Bites
+              </h4>
+            </div>
+            <div
+              class="location__side location__side--back location__side--back-3"
+            >
+              <div class="location__button">
+                <div class="location__content">
+                  <h3 class="heading-tertiary u-margin-bottom-small">
+                    Experience Empire State
+                  </h3>
+                  <p class="location-box__text">
+                    Savor our signature burgers at the Empire State Bites
+                    location. Relish the iconic taste while taking in
+                    breathtaking views of the Empire State Building and the city
+                    skyline.
+                  </p>
+                  <a href="#contact" class="btn btn--white">Book Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-1-of-4">
+          <div class="location">
+            <div class="location__side location__side--front">
+              <div class="location__image location__image--4"></div>
+              <h4 class="location__heading location__heading--4">
+                Brooklyn Flavors
+              </h4>
+            </div>
+            <div
+              class="location__side location__side--back location__side--back-4"
+            >
+              <div class="location__button">
+                <div class="location__content">
+                  <h3 class="heading-tertiary u-margin-bottom-small">
+                    Taste Brooklyn
+                  </h3>
+                  <p class="location-box__text">
+                    Our Brooklyn location is a culinary adventure waiting to be
+                    explored. Relish our mouthwatering burgers while immersing
+                    yourself in the artistic and cultural atmosphere of
+                    Brooklyn.
+                  </p>
+                  <a href="#contact" class="btn btn--white">Book Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="contact-section" id="contact">
+      <h2 class="heading-secondary contact-us">
+        <div class="u-align-center u-margin-bottom-big">Contact Us</div>
+      </h2>
+      <div class="u-display-flex contact-container">
+        <div class="contact-row">
+          <div class="contact">
+            <div class="contact__form">
+              <form class="form" target="#">
+                <div class="form__group">
+                  <input
+                    type="text"
+                    class="form__input"
+                    id="name"
+                    placeholder="Full Name"
+                    required
+                  />
+                  <label for="name" class="form__label">Full Name</label>
+                </div>
+                <div class="form__group">
+                  <input
+                    type="email"
+                    class="form__input"
+                    id="email"
+                    placeholder="Email Address"
+                    required
+                  />
+                  <label for="email" class="form__label">Email Address</label>
+                </div>
+                <div class="form__radio-container">
+                  <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      id="Times"
+                      name="location"
+                    />
+                    <label for="Times" class="form__radio-label"
+                      ><span class="form__radio-button"></span>Times Square
+                      Delight</label
+                    >
+                  </div>
+                  <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      id="Central"
+                      name="location"
+                    />
+                    <label for="Central" class="form__radio-label"
+                      ><span class="form__radio-button"></span>Central Park
+                      Oasis</label
+                    >
+                  </div>
 
-		<script>
-			const modals = document.querySelectorAll('.modal');
-	
-			modals.forEach(modal => {
-				modal.addEventListener('click', function() {
-					if (modal.style.display !== 'none') {
-						document.body.style.overflow = 'hidden';
-					} else {
-						document.body.style.overflow = 'auto';
-					}
-				});
-			});
-	
-			window.addEventListener('hashchange', function() {
-				const isModalOpen = window.location.hash.startsWith('#modal-');
-				document.body.style.overflow = isModalOpen ? 'hidden' : 'auto';
-			});
-		</script>
-	</body>
+                  <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      id="Empire"
+                      name="location"
+                    />
+                    <label for="Empire" class="form__radio-label"
+                      ><span class="form__radio-button"></span>Empire State
+                      Bites</label
+                    >
+                  </div>
+                  <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      id="Brooklyn"
+                      name="location"
+                    />
+                    <label for="Brooklyn" class="form__radio-label"
+                      ><span class="form__radio-button"></span>Brooklyn
+                      Flavors</label
+                    >
+                  </div>
+                </div>
+                <div class="form__group">
+                  <textarea
+                    class="form__textarea"
+                    name="message"
+                    placeholder="Your message"
+                  ></textarea>
+                </div>
+                <div class="form__group">
+                  <a href="#" class="btn-rectangular btn-rectangular--white"
+                    >Send &rarr;</a
+                  >
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__logo-box">
+        <picture class="footer__logo">
+          <source
+            srcset="
+              vendors/favicon/android-chrome-192x192.png 2x,
+              vendors/favicon/android-chrome-192x192.png 1x
+            "
+            media="(max-width: 480px)"
+          />
+          <img
+            srcset="img/logo-burger.png 2x, img/logo-burger.png 1x"
+            src="img/logo-burger.png"
+            alt="CityBite Burgers Logo"
+          />
+        </picture>
+      </div>
+      <div class="footer-width">
+        <div>
+          <div class="footer__navigation">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#" class="footer__link">Our Story</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Contact Us</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Careers</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Privacy</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Terms</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__copyright">
+          <div class="footer__copyright-box">
+            <p>
+              &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              Filosoho Space. AllRights Reserved.
+            </p>
+            <br />
+            <span class="footer-small">
+              Project from course by
+              <p class="footer__author">Nahid Akhter</p>
+              and
+              <p class="footer__author">Juan Galvan.</p>
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const modals = document.querySelectorAll(".modal");
+
+      modals.forEach((modal) => {
+        modal.addEventListener("click", function () {
+          if (modal.style.display !== "none") {
+            document.body.style.overflow = "hidden";
+          } else {
+            document.body.style.overflow = "auto";
+          }
+        });
+      });
+
+      window.addEventListener("hashchange", function () {
+        const isModalOpen = window.location.hash.startsWith("#modal-");
+        document.body.style.overflow = isModalOpen ? "hidden" : "auto";
+      });
+    </script>
+  </body>
 </html>
